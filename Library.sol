@@ -17,7 +17,6 @@ contract Library{
         }
         _;
     }
-    
 
     /* Public functions */
     /// @dev Simple function that returns true/false.
