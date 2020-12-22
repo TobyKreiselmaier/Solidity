@@ -1,6 +1,6 @@
 /// SPDX-License-Identifier: UNLICENSED
 
-pragma solidity 0.8.0;
+pragma solidity ^0.8.0;
 
 /// @title Multisignature wallet - Allows multiple parties to agree on transactions.
 
@@ -17,7 +17,7 @@ contract MultiSigWallet {
     event OwnerRemoval(address indexed owner);
     event RequirementChange(uint256 required);
 
-    /* views */
+    /* Views */
     uint256 constant public MAX_OWNER_COUNT = 5;
 
     /* Variables */
