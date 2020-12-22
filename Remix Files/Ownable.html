@@ -1,0 +1,2588 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)https://remix.ethereum.org/ -->
+<html style="--theme:light;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="./Ownable_files/bootstrap.min.css" id="theme-link">
+
+
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<title>Remix - Ethereum IDE</title>
+<link rel="stylesheet" href="./Ownable_files/pygment_trac.css">
+<link rel="icon" type="x-icon" href="https://remix.ethereum.org/icon.png">
+<script src="./Ownable_files/browserfs.min.js.download"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<link rel="stylesheet" href="./Ownable_files/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"><link rel="stylesheet" href="./Ownable_files/pygment_trac.css"><style type="text/css">
+  .cardContainer_3FPu6M {
+    padding             : 0 24px 16px;
+    margin              : 0;
+    background          : none;
+  }
+  .arrow_3FPu6M {
+    font-weight         : bold;
+    cursor              : pointer;
+    font-size           : 14px;
+  }
+  .arrow_3FPu6M:hover {
+  }
+
+</style><style type="text/css">
+  .runTabView_1d3Kxh {
+    display: flex;
+    flex-direction: column;
+  }
+  .runTabView_1d3Kxh::-webkit-scrollbar {
+    display: none;
+  }
+  .settings_1d3Kxh {
+    padding: 0 24px 16px;
+  }
+  .crow_1d3Kxh {
+    display: block;
+    margin-top: 8px;
+  }
+  .col1_1d3Kxh {
+    width: 30%;
+    float: left;
+    align-self: center;
+  }
+  .settingsLabel_1d3Kxh {
+    font-size: 11px;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
+  .environment_1d3Kxh {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+  .environment_1d3Kxh a {
+    margin-left: 7px;
+  }
+  .account_1d3Kxh {
+    display: flex;
+    align-items: center;
+  }
+  .account_1d3Kxh i {
+    margin-left: 12px;
+  }
+  .col2_1d3Kxh {
+    border-radius: 3px;
+  }
+  .col2_1_1d3Kxh {
+    width: 164px;
+    min-width: 164px;
+  }
+  .col2_2_1d3Kxh {
+  }
+  .select_1d3Kxh {
+    font-weight: normal;
+    width: 100%;
+  }
+  .instanceContainer_1d3Kxh {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2%;
+    border: none;
+    text-align: center;
+    padding: 0 14px 16px;
+  }
+  .pendingTxsContainer_1d3Kxh  {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    border: none;
+    text-align: center;
+  }
+  .container_1d3Kxh {
+    padding: 0 24px 16px;
+  }
+  .recorderDescription_1d3Kxh {
+    margin: 0 15px 15px 0;
+   }
+  .contractNames_1d3Kxh {
+    width: 100%;
+    border: 1px solid
+  }
+  .subcontainer_1d3Kxh {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .subcontainer_1d3Kxh i {
+    width: 16px;
+    display: flex;
+    justify-content: center;
+    margin-left: 1px;
+  }
+  .button_1d3Kxh button{
+    flex: none;
+  }
+  .button_1d3Kxh {
+    display: flex;
+    align-items: center;
+    margin-top: 13px;
+  }
+  .transaction_1d3Kxh {
+  }
+  .atAddress_1d3Kxh {
+    margin: 0;
+    min-width: 100px;
+    width: 100px;
+    height: 100%;
+    word-break: inherit;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
+  }
+  .atAddressSect_1d3Kxh {
+    margin-top: 8px;
+    height: 32px;
+  }
+  .atAddressSect_1d3Kxh input {
+    height: 32px;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+  }
+  .ataddressinput_1d3Kxh {
+    padding: .25rem;
+  }
+  .create_1d3Kxh {
+  }
+  .input_1d3Kxh {
+    font-size: 10px !important;
+  }
+  .noInstancesText_1d3Kxh {
+    font-style: italic;
+    text-align: left;
+    padding-left: 15px;
+  }
+  .pendingTxsText_1d3Kxh {
+    font-style: italic;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .item_1d3Kxh {
+    margin-right: 1em;
+    display: flex;
+    align-items: center;
+  }
+  .pendingContainer_1d3Kxh {
+    display: flex;
+    align-items: baseline;
+  }
+  .pending_1d3Kxh {
+    height: 25px;
+    text-align: center;
+    padding-left: 10px;
+    border-radius: 3px;
+    margin-left: 5px;
+  }
+  .disableMouseEvents_1d3Kxh {
+    pointer-events: none;
+  }
+  .icon_1d3Kxh {
+    cursor: pointer;
+    font-size: 12px;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  .icon_1d3Kxh:hover {
+    font-size: 12px;
+    color: var(--warning);
+  }
+  .errorIcon_1d3Kxh {
+    color: var(--warning);
+    margin-left: 15px;
+  }
+  .failDesc_1d3Kxh {
+    color: var(--warning);
+    padding-left: 10px;
+    display: inline;
+  }
+  .network_1d3Kxh {
+    margin-left: 8px;
+    pointer-events: none;
+  }
+  .networkItem_1d3Kxh {
+    margin-right: 5px;
+  }
+  .transactionActions_1d3Kxh {
+    display: flex;
+    justify-content: space-evenly;
+    width: 145px;
+  }
+  .orLabel_1d3Kxh {
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .infoDeployAction_1d3Kxh {
+    margin-left: 1px;
+    font-size: 13px;
+    color: var(--info);
+  }
+  .gasValueContainer_1d3Kxh {
+    flex-direction: row;
+    display: flex;
+  }
+  .gasNval_1d3Kxh {
+    width: 55%;
+    font-size: 0.8rem;
+  }
+  .gasNvalUnit_1d3Kxh {
+    width: 41%;
+    margin-left: 10px;
+    font-size: 0.8rem;
+  }
+  .deployDropdown_1d3Kxh {
+    text-align: center;
+    text-transform: uppercase;
+  }
+</style><style type="text/css">
+  .tooltip_1v2I0A {
+    z-index: 1001;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    min-height: 50px;
+    padding: 16px 24px 12px;
+    border-radius: 3px;
+    bottom: -300;
+    left: 40%;
+    font-size: 14px;
+    text-align: center;
+    bottom: 0;
+    flex-direction: row;
+  }
+  @-webkit-keyframes animatebottom_1v2I0A  {
+    0% {bottom: -300px}
+    100% {bottom: 0}
+  }
+  @keyframes animatebottom_1v2I0A  {
+    0% {bottom: -300px}
+    100% {bottom: 0}
+  }
+  @-webkit-keyframes animatetop_1v2I0A  {
+    0% {bottom: 0}
+    100% {bottom: -300px}
+  }
+  @keyframes animatetop_1v2I0A  {
+    0% {bottom: 0}
+    100% {bottom: -300px}
+  }
+  .animateTop_1v2I0A {
+    -webkit-animation-name: animatetop_1v2I0A;
+    -webkit-animation-duration: 2s;
+    animation-name: animatetop_1v2I0A;
+    animation-duration: 2s;
+  }
+  .animateBottom_1v2I0A {
+    -webkit-animation-name: animatebottom_1v2I0A;
+    -webkit-animation-duration: 2s;
+    animation-name: animatebottom_1v2I0A;
+    animation-duration: 2s;    
+  }
+</style><style type="text/css">
+
+  .modalFooter_2n3OK6 {
+  }
+  .modalContent_2n3OK6 {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop_2n3OK6;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop_2n3OK6;
+    animation-duration: 0.4s
+  }
+  .modalBody_2n3OK6 {
+    word-break: break-word;
+    overflow-y: auto;
+    max-height: 600px;
+  }
+  .modalFooterOk_2n3OK6 {
+  }
+  .modalFooterCancel_2n3OK6 {
+  }
+  @-webkit-keyframes animatetop_2n3OK6 {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
+  @keyframes animatetop_2n3OK6 {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
+</style><style type="text/css">
+  .prompt_text_4kRTle {
+    width: 100%;
+  }
+</style><style type="text/css">
+  .copyIcon_3sVBlb {
+    margin-left: 5px;
+    cursor: pointer;
+  }
+</style><style type="text/css">
+  .txInfoBox_1y3ZCv {
+  }
+  .wrapword_1y3ZCv {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  }
+</style><style type="text/css">
+  .instanceTitleContainer_2R5vN0 {
+    display: flex;
+    align-items: center;
+  }
+  .calldataInput_2R5vN0{
+    height: 32px;
+  }
+  .title_2R5vN0 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    width: 100%;
+    overflow: hidden;
+    word-break: break-word;
+    line-height: initial;
+    overflow: visible;
+    padding: 0 0 8px;
+    margin: 0;
+    background: none;
+    border: none;
+  }
+  .title_2R5vN0 button {
+    background: none;
+    border: none;
+  }
+  .titleLine_2R5vN0 {
+    display: flex;
+    align-items: baseline;
+  }
+  .titleText_2R5vN0 {
+    word-break: break-word;
+    width: 100%;
+    border: none;
+  }
+  .spanTitleText_2R5vN0 {
+    line-height: 12px;
+    padding: 0;
+    font-size: 11px;
+    width:100%;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+  }
+  .inputGroupText_2R5vN0 {
+    width: 100%;
+  }
+  .title_2R5vN0 .copy_2R5vN0 {
+    color: var(--primary);
+  }
+  .titleExpander_2R5vN0 {
+    padding: 5px 7px;
+  }
+  .nameNbuts_2R5vN0 {
+    display: contents;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  .instance_2R5vN0 {
+    display: block;
+    flex-direction: column;
+    margin-bottom: 12px;
+    background: none;
+    border-radius: 2px;
+  }
+  .instance_2R5vN0.hidesub_2R5vN0 {
+    border-bottom: 1px solid;
+  }
+  .instance_2R5vN0.hidesub_2R5vN0 .title_2R5vN0 {
+      display: flex;
+  }
+  .instance_2R5vN0.hidesub_2R5vN0 .udappClose_2R5vN0 {
+      display: flex;
+  }
+  .instance_2R5vN0.hidesub_2R5vN0 > * {
+    display: none;
+  }
+  .methCaret_2R5vN0 {
+    min-width: 12px;
+    width: 12px;
+    margin-left: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 0.6;
+    vertical-align: middle;
+    padding: 0;
+  }
+  .cActionsWrapper_2R5vN0 {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0.25rem;
+    border-top-rightt-radius: 0;
+    border-bottom-right-radius: 0.25rem;
+    padding: 8px 10px 7px;
+  }
+  .group_2R5vN0:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .buttonsContainer_2R5vN0 {
+    margin-top: 2%;
+    display: flex;
+    overflow: hidden;
+  }
+  .instanceButton_2R5vN0 {
+    height: 32px;
+    border-radius: 3px;
+    white-space: nowrap;
+    font-size: 11px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .closeIcon_2R5vN0 {
+    font-size: 12px;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  .udappClose_2R5vN0 {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .contractProperty_2R5vN0 {
+    width:100%;
+  }
+  .contractProperty_2R5vN0.hasArgs_2R5vN0 input {
+    padding: .36em;
+    border-radius: 5px;
+  }
+  .contractProperty_2R5vN0 .contractActionsContainerSingle_2R5vN0 input{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .contractProperty_2R5vN0 button {
+    min-width: 100px;
+    width: 100px;
+    margin:0;
+    word-break: inherit;
+  }
+  .contractProperty_2R5vN0 button:disabled {
+    cursor: not-allowed;
+    background-color: white;
+    border-color: lightgray;
+  }
+  .contractProperty_2R5vN0.constant_2R5vN0 button {
+    min-width: 100px;
+    width: 100px;
+    margin:0;
+    word-break: inherit;
+    outline: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .contractProperty_2R5vN0 > .value_2R5vN0 {
+    box-sizing: border-box;
+    float: left;
+    align-self: center;
+    margin-left: 4px;
+  }
+  .contractActionsContainer_2R5vN0 {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .contractActionsContainerSingle_2R5vN0 {
+    display: flex;
+    width: 100%;
+  }
+  .contractActionsContainerSingle_2R5vN0 i {
+    line-height: 2;
+  }
+  .contractActionsContainerMulti_2R5vN0 {
+    display:none;
+    width: 100%;
+  }
+  .contractActionsContainerMultiInner_2R5vN0 {
+    width: 100%;
+    padding: 16px 8px 16px 14px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+  }
+  .multiHeader_2R5vN0 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    text-align: left;
+    font-size: 10px;
+    font-weight: bold;
+  }
+  .contractActionsContainerMultiInner_2R5vN0 .multiTitle_2R5vN0 {
+    padding-left: 10px;
+  }
+  .contractProperty_2R5vN0 .multiTitle_2R5vN0 {
+    padding: 0;
+    line-height: 16px;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: default;
+  }
+  .contractProperty_2R5vN0 .contractActionsContainerMultiInner_2R5vN0 .multiArg_2R5vN0 label{
+    text-align: right;
+  }
+  .multiHeader_2R5vN0 .methCaret_2R5vN0 {
+    float: right;
+    margin-right: 0;
+  }
+  .contractProperty_2R5vN0.constant_2R5vN0 .multiTitle_2R5vN0 {
+    display: inline-block;
+    width: 90%;
+    /* font-size: 10px; */
+    height: 25px;
+    padding-left: 20px;
+    font-weight: bold;
+    line-height: 25px;
+    cursor: default;
+  }
+  .multiArg_2R5vN0 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 4px;
+  }
+  .multiArg_2R5vN0 input{
+    padding: 5px;
+  }
+  .multiArg_2R5vN0 label {
+    width: auto;
+    padding: 0;
+    margin: 0 4px 0 0;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: right;
+    word-break: initial;
+  }
+  .multiArg_2R5vN0 button {
+    max-width: 100px;
+    border-radius: 3px;
+    border-width: 1px;
+    width: inherit;
+  }
+  .multiHeader_2R5vN0 button {
+    display: inline-block;
+    width: 94%;
+  }
+  .hasArgs_2R5vN0 .multiArg_2R5vN0 input {
+    border-left: 1px solid #dddddd;
+    width: 67%;
+  }
+  .hasArgs_2R5vN0 input {
+    display: block;
+    height: 32px;
+    border: 1px solid #dddddd;
+    padding: .36em;
+    border-left: none;
+    padding: 8px 8px 8px 10px;
+    font-size: 10px !important;
+  }
+  .hasArgs_2R5vN0 button {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 11px;
+  }
+  .hasArgs_2R5vN0 .contractActionsContainerMulti_2R5vN0 button {
+    border-radius: 3px;
+  }
+  .contractActionsContainerMultiInner_2R5vN0 .multiArg_2R5vN0 i {
+    padding-right: 10px;
+  }
+  .hideWarningsContainer_2R5vN0 {
+    display: flex;
+    align-items: center;
+    margin-left: 2%
+  }
+</style><style type="text/css">
+  .li_tv_1wtZNj {
+    list-style-type: none;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+    margin-left: 10px;
+  }
+  .ul_tv_1wtZNj {
+    list-style-type: none;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+  }
+  .caret_tv_1wtZNj {
+    width: 10px;
+    flex-shrink: 0;
+  }
+  .label_tv_1wtZNj {
+    align-items: center;
+  }
+  .label_tv_1wtZNj>span {
+    word-break: break-all;
+  }
+</style><style type="text/css">
+  .dragbar_3ExFFr            {
+    width             : 2px;
+    height            : 100%;
+    cursor            : col-resize;
+    z-index           : 999;
+  }
+  .ghostbar_3ExFFr           {
+    width             : 3px;
+    background-color  : var(--primary);
+    opacity           : 0.5;
+    position          : absolute;
+    cursor            : col-resize;
+    z-index           : 9999;
+    top               : 0;
+    bottom            : 0;
+  }
+</style><style type="text/css">
+.permission_38XEuo h4 {
+  text-transform: uppercase;
+  text-align: center;
+}
+.permission_38XEuo h6 {
+  text-transform: uppercase;
+}
+.remember_38XEuo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.images_38XEuo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.images_38XEuo img {
+  width: 40px;
+  height: 40px;
+}
+.images_38XEuo i {
+  margin: 0 20px;
+}
+</style><style type="text/css">
+  .contextview_1aBVsD {
+    opacity             : 1;
+    position            : relative;
+    height              : 25px;
+  }
+  .container_1aBVsD {
+    padding             : 1px 15px;
+  }
+  .line_1aBVsD {
+    display             : flex;
+    justify-content     : flex-end;
+    align-items         : center;
+    text-overflow       : ellipsis;
+    overflow            : hidden;
+    white-space         : nowrap;
+    font-size           : 13px;
+  }
+  .type_1aBVsD {
+    font-style        : italic;
+    margin-right      : 5px;
+  }
+  .name_1aBVsD  {
+    font-weight       : bold;
+  }
+  .jump_1aBVsD {
+    cursor            : pointer;
+    margin            : 0 5px;
+  }
+  .jump_1aBVsD:hover              {
+    color             : var(--secondary);
+  }
+  .referencesnb_1aBVsD {
+    float             : right;
+    margin-left       : 15px;
+  }
+  .gasEstimation_1aBVsD {
+    margin-right      : 15px;
+    display           : flex;
+    align-items       : center;
+  }
+  .gasStationIcon_1aBVsD {
+    margin-right      : 5px;
+  }
+  .contextviewcontainer_1aBVsD {
+    z-index           : 50;
+    border-radius     : 1px;
+    border            : 2px solid var(--secondary);
+  }
+  .contextviewcontainer_1aBVsD{
+    z-index           : 50;
+    border-radius     : 1px;
+    border            : 2px solid var(--secondary);
+  }
+</style><style type="text/css">
+  .mainview_3GDJYU            {
+    display           : flex;
+    flex-direction    : column;
+    height            : 100%;
+    width             : 100%;
+  }
+</style><style type="text/css">
+  .plugins_1o31mc        {
+    height: 100%;
+  }
+  .plugItIn_1o31mc       {
+    display        : none;
+    height         : 100%;
+  }
+  .plugItIn_1o31mc > div {
+    overflow-y     : auto;
+    height         : 100%;
+    width          : 100%;
+  }
+  .plugItIn_1o31mc.active_1o31mc     {
+    display        : block;
+  }
+  .pluginsContainer_1o31mc {
+    height         : 100%;
+    overflow-y     : hidden;
+  }
+</style><style type="text/css">
+  .panel_2YawIs {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+  }
+  .swapitTitle_2YawIs {
+    margin: 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .swapitTitle_2YawIs i{
+    padding-left: 6px;
+    font-size: 14px;
+  }
+  .swapitHeader_2YawIs {
+    display: flex;
+    align-items: center;
+    padding: 16px 24px 15px;
+  }
+  .icons_2YawIs i {
+    height: 80%;
+    cursor: pointer;
+  }
+  .pluginsContainer_2YawIs {
+    height: 100%;
+    overflow-y: auto;
+  }
+  .titleInfo_2YawIs {
+    padding-left: 10px;
+  }
+  .versionBadge_2YawIs {
+    background-color: var(--light);
+    padding: 0 7px;
+    font-weight: bolder;
+    margin-left: 5px;
+    text-transform: lowercase;
+    cursor: default;
+  }
+</style><style type="text/css">
+  .pluginsContainer_RSAlr {
+    display: none;
+  }
+</style><style type="text/css">
+  .homeIcon_2aGKki {
+      display: block;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 20px;
+      margin-left: -5px;
+      cursor: pointer;
+  }
+  .homeIcon_2aGKki svg path {
+    fill: var(--primary);
+  }
+  .homeIcon_2aGKki svg polygon {
+    fill: var(--primary);
+  }
+  .icons_2aGKki {
+    margin-left: 10px;
+    margin-top: 15px;
+  }
+  .icon_2aGKki {
+    cursor: pointer;
+    margin-bottom: 12px;
+    width: 36px;
+    height: 36px;
+    padding: 3px;
+    position: relative;
+    border-radius: 8px;
+  }
+  .icon_2aGKki img {
+    width: 28px;
+    height: 28px;
+    padding: 4px;
+    filter: invert(0.5);
+  }
+  .image_2aGKki {
+  }
+  .icon_2aGKki svg {
+    width: 28px;
+    height: 28px;
+    padding: 4px;
+  }
+  .icon_2aGKki[title='Settings'] {
+    position: absolute;
+    bottom: 0;
+  }
+  .status_2aGKki {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .statusCheck_2aGKki {
+    font-size: 1.2em;
+  }
+  .statusWithBG
+    border-radius: 8px;
+    background-color: var(--danger);
+    color: var(--light);
+    font-size: 12px;
+    height: 15px;
+    text-align: center;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+</style><style type="text/css">
+  .text_4DNwf0 {
+    cursor: pointer;
+    font-weight: normal;
+    max-width: 300px;
+    user-select: none;
+  }
+  .text_4DNwf0:hover {
+    text-decoration: underline;
+  }
+  .homeContainer_4DNwf0 {
+    user-select:none;
+  }
+  .thisJumboton_4DNwf0 {
+    padding: 2.5rem 0rem;
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+  }
+  .hpLogoContainer_4DNwf0 {
+    margin:30px;
+    padding-right: 90px;
+  }
+  .jumboBtnContainer_4DNwf0 {
+  }
+  .headlineContainer_4DNwf0 {
+    margin: 0 50px 0 70px;
+  }
+  .hpSections_4DNwf0 {
+    min-width: 640px;
+  }
+  .labelIt_4DNwf0 {
+    margin-bottom: 0;
+  }
+  .seeAll_4DNwf0 {
+    margin-top: 7px;
+    white-space: nowrap;
+  }
+  .importFrom_4DNwf0 p {
+    margin-right: 10px;
+  }
+  .logoContainer_4DNwf0 {
+    float: left;
+  }
+  .logoContainer_4DNwf0 img{
+    height: 150px;
+    opacity: 0.7;
+  }
+  .enviroments_4DNwf0 {
+    display: flex;
+  }
+  .envLogo_4DNwf0 {
+    height: 16px;
+  }
+  .envLabel_4DNwf0 {
+    cursor: pointer;
+  }
+  .envButton_4DNwf0 {
+    width: 120px;
+    height: 70px;
+  }
+}
+</style><style type="text/css">
+  .pluginsContainer_3cZxuR {
+    height: 100%;
+    display: flex;
+    overflow-y: hidden;
+  }
+</style><style type="text/css"> 
+.permissions_3civKl {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px 20px;
+}
+.permissions_3civKl button {
+  padding: 2px 5px;
+  cursor: pointer;
+}
+.permissionForm_3civKl h4 {
+  font-size: 1.3rem;
+  text-align: center;
+}
+.permissionForm_3civKl h6 {
+  font-size: 1.1rem;
+}
+.permissionForm_3civKl hr {
+  width: 80%;
+}
+.permissionKey_3civKl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.permissionKey_3civKl i {
+  cursor: pointer;
+}
+.checkbox_3civKl {
+  display: flex;
+  align-items: center;
+}
+.checkbox_3civKl label {
+  margin: 0;
+  font-size: 1rem;
+}
+</style><style type="text/css">
+  .pluginSearch_1dJy0o {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--light);
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    margin-bottom: 0px;
+  }
+  .pluginSearchInput_1dJy0o {
+    height: 38px;
+  }
+  .pluginSearchButton_1dJy0o {
+    font-size: 13px;
+  }
+  .displayName_1dJy0o {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .description_1dJy0o {
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: capitalize;
+  }
+  .row_1dJy0o {
+    display: flex;
+    flex-direction: row;
+  }
+  .isStuck_1dJy0o {
+    background-color: var(--primary);
+    color: 
+  }
+  .versionWarning_1dJy0o {
+    padding: 4px;
+    margin: 0 8px;
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 12px;
+    text-transform: uppercase;
+    cursor: default;
+    border: 1px solid;
+    border-radius: 2px;
+  }
+</style><style type="text/css">
+  .title_4wegiV {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+  .panicError_4wegiV {
+    color: red;
+    font-size: 20px;
+  }
+  .crow_4wegiV {
+    display: flex;
+    overflow: auto;
+    clear: both;
+    padding: .2em;
+  }
+  .checkboxText_4wegiV {
+    font-weight: normal;
+  }
+  .crow_4wegiV label {
+    cursor:pointer;
+  }
+  .crowNoFlex_4wegiV {
+    overflow: auto;
+    clear: both;
+  }
+  .info_4wegiV {
+    padding: 10px;
+    word-break: break-word;
+  }
+  .contract_4wegiV {
+    display: block;
+    margin: 3% 0;
+  }
+  .nightlyBuilds_4wegiV {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .autocompileContainer_4wegiV {
+    display: flex;
+    align-items: center;
+  }
+  .hideWarningsContainer_4wegiV {
+    display: flex;
+    align-items: center;
+  }
+  .autocompile_4wegiV {}
+  .autocompileTitle_4wegiV {
+    font-weight: bold;
+    margin: 1% 0;
+  }
+  .autocompileText_4wegiV {
+    margin: 1% 0;
+    font-size: 12px;
+    overflow: hidden;
+    word-break: normal;
+    line-height: initial;
+  }
+  .warnCompilationSlow_4wegiV {
+    margin-left: 1%;
+  }
+  .compilerConfig_4wegiV {
+    display: flex;
+    align-items: center;
+  }
+  .compilerConfig_4wegiV label {
+    margin: 0;
+  }
+  .compilerSection_4wegiV {
+    padding: 12px 24px 16px;
+  }
+  .compilerLabel_4wegiV {
+    margin-bottom: 2px;
+    font-size: 11px;
+    line-height: 12px;
+    text-transform: uppercase;
+  }
+  .copyButton_4wegiV {
+    padding: 6px;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 15px;
+  }
+  .name_4wegiV {
+    display: flex;
+  }
+  .size_4wegiV {
+    display: flex;
+  }
+  .checkboxes_4wegiV {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .compileButton_4wegiV {
+    width: 100%;
+    margin: 15px 0 10px 0;
+    font-size: 12px;
+  }
+  .container_4wegiV {
+    margin: 0;
+    margin-bottom: 2%;
+  }
+  .optimizeContainer_4wegiV {
+    display: flex;
+  }
+  .noContractAlert_4wegiV {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contractHelperButtons_4wegiV {
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    float: right;
+  }
+  .copyToClipboard_4wegiV {
+    font-size: 1rem;
+  }
+  .copyIcon_4wegiV {
+    margin-right: 5px;
+  }
+  .log_4wegiV {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+    overflow: visible;
+  }
+  .key_4wegiV {
+    margin-right: 5px;
+    text-transform: uppercase;
+    width: 100%;
+  }
+  .value_4wegiV {
+    display: flex;
+    width: 100%;
+    margin-top: 1.5%;
+  }
+  .questionMark_4wegiV {
+    margin-left: 2%;
+    cursor: pointer;
+  }
+  .questionMark_4wegiV:hover {
+  }
+  .detailsJSON_4wegiV {
+    padding: 8px 0;
+    border: none;
+  }
+  .icon_4wegiV {
+    margin-right: 0.3em;
+  }
+  .errorBlobs_4wegiV {
+    padding-left: 5px;
+    padding-right: 5px;
+    word-break: break-all;
+  }
+  .storageLogo_4wegiV {
+    width: 20px;
+    height: 20px;
+  }
+  .spinningIcon_4wegiV {
+    display: inline-block;
+    position: relative;
+    animation: spin_4wegiV 2s infinite linear;
+    -moz-animation: spin_4wegiV 2s infinite linear;
+    -o-animation: spin_4wegiV 2s infinite linear;
+    -webkit-animation: spin_4wegiV 2s infinite linear;
+  }
+  @keyframes spin_4wegiV {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  @-webkit-keyframes spin_4wegiV {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  @-moz-keyframes spin_4wegiV {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  @-o-keyframes spin_4wegiV {
+     0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  @-ms-keyframes spin_4wegiV {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .bouncingIcon_4wegiV {
+    display: inline-block;
+    position: relative;
+    -moz-animation: bounce_4wegiV 2s infinite linear;
+    -o-animation: bounce_4wegiV 2s infinite linear;
+    -webkit-animation: bounce_4wegiV 2s infinite linear;
+    animation: bounce_4wegiV 2s infinite linear;
+  } 
+
+  @-webkit-keyframes bounce_4wegiV {
+      0% { top: 0; }
+      50% { top: -0.2em; }
+      70% { top: -0.3em; }
+      100% { top: 0; }
+  }
+  @-moz-keyframes bounce_4wegiV {
+      0% { top: 0; }
+      50% { top: -0.2em; }
+      70% { top: -0.3em; }
+      100% { top: 0; }
+  }
+  @-o-keyframes bounce_4wegiV {
+      0% { top: 0; }
+      50% { top: -0.2em; }
+      70% { top: -0.3em; }
+      100% { top: 0; }
+  }
+  @-ms-keyframes bounce_4wegiV {
+      0% { top: 0; }
+      50% { top: -0.2em; }
+      70% { top: -0.3em; }
+      100% { top: 0; }
+  }
+  @keyframes bounce_4wegiV {
+      0% { top: 0; }
+      50% { top: -0.2em; }
+      70% { top: -0.3em; }
+      100% { top: 0; }
+  }
+</style><style type="text/css">
+  .settingsTabView_1i88h9 {
+    padding: 2%;
+  }
+  .info_1i88h9 {
+    margin-bottom: .6rem;
+    word-break: break-word;
+    font-size: .8rem;
+  }
+  .info_1i88h9 h7 {
+    margin-bottom: .5rem;
+  }
+  .frow_1i88h9 {
+    margin-bottom: .5rem;
+  }
+  .crow_1i88h9 label {
+    cursor:pointer;
+  }
+  .crowNoFlex_1i88h9 {
+    overflow: auto;
+    clear: both;
+  }
+  .attention_1i88h9 {
+    margin-bottom: 1em;
+    padding: .5em;
+    font-weight: bold;
+  }
+  .heading_1i88h9 {
+    margin-bottom: 0;
+  }
+  .explaination_1i88h9 {
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+  input {
+    width: inherit;
+  }
+  input[type=radio] {
+    margin-top: 2px;
+  }
+  .pluginTextArea_1i88h9 {
+    font-family: unset;
+  }
+
+  .removePlugin_1i88h9 {
+    cursor: pointer;
+  }
+  .icon_1i88h9 {
+    margin-right: .5em;
+  }
+  .aPlugin_1i88h9 {
+    display: inline-block;
+    padding-left: 10px;
+    padding-top: 4px;
+    padding-bottom: 6px;
+    max-width: 100px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: middle;
+  }
+  .removePlugin_1i88h9{
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-left: 10px;
+  }
+  .inline_1i88h9 {
+    display: inline;
+    width: 32%;
+  }
+</style><style type="text/css">
+  .analysis_2qua9T {
+    display: flex;
+    flex-direction: column;
+  }
+  .result_2qua9T {
+    margin-top: 1%;
+    max-height: 300px;
+    word-break: break-all;
+  }
+  .resultTitle_2qua9T {
+    padding-top: 20px;
+  }
+  .buttons_2qua9T  {
+    margin: 1rem 0;
+  }
+  .buttonsInner_2qua9T {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .buttonRun_2qua9T  {
+    margin-right: 1%;
+  }
+  .analysisModulesContainer_2qua9T {
+  }
+  .label_2qua9T {
+    display: flex;
+    align-items: center;
+  }
+  .container_2qua9T {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+</style><style type="text/css">
+  .analysisTabView_3yybrr {
+    padding: 2%;
+    padding-bottom: 3em;
+  }
+</style><style type="text/css">
+  .debuggerTabView_4F6hd {
+    padding: 2%;
+  }
+  .debugger_4F6hd {
+    margin-bottom: 1%;
+  }
+</style><style type="text/css">
+  .container_43VkWD {
+    display: flex;
+    flex-direction: column;
+  }
+  .txContainer_43VkWD {
+    display: flex;
+    flex-direction: column;
+  }
+  .txinputs_43VkWD {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .txinput_43VkWD {
+    width: inherit;
+    font-size: small;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .txbuttons_43VkWD {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .txbutton_43VkWD {
+    width: inherit;
+  }
+  .txbuttonstart_43VkWD {
+  }
+  .txbutton_43VkWD:hover {
+  }
+  .vmargin_43VkWD {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+</style><style type="text/css">
+  .buttons_3F2Im5 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .stepButtons_3F2Im5 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .stepButton_3F2Im5 {
+  }
+  .jumpButtons_3F2Im5 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .jumpButton_3F2Im5 {
+  }
+  .navigator_3F2Im5 {
+  }
+  .navigator_3F2Im5:hover {
+  }
+</style><style type="text/css">
+  .title_FPM7J {
+    display: flex;
+    align-items: center;
+  }
+  .name_FPM7J {
+    font-weight: bold;
+  }
+  .nameDetail_FPM7J {
+    font-weight: bold;
+    margin-left: 3px;
+  }
+  .icon_FPM7J {
+    margin-right: 5%;
+  }
+  .eyeButton_FPM7J {
+    margin: 3px;
+  }
+  .eyeButton_FPM7J:hover {
+  }
+  .dropdownpanel_FPM7J {
+    width: 100%;
+    word-break: break-all;
+  }
+  .dropdownrawcontent_FPM7J {
+    padding: 2px;
+    word-break: break-all;
+  }
+  .message_FPM7J {
+    padding: 2px;
+    word-break: break-all;
+  }
+  .refresh_FPM7J {
+    display: none;
+    margin-left: 4px;
+    margin-top: 4px; 
+    animation: spin 2s linear infinite;
+  }
+</style><style type="text/css">
+  .instructions_2BtYlB {
+    overflow-y: scroll;
+    max-height: 150px;
+  }
+</style><style type="text/css">
+  .asmCode_2eX2yC {
+    width: 100%;
+  }
+  .stepDetail_2eX2yC {
+    width: 100%;
+  }
+  .vmheadView_2eX2yC {
+    margin-top:10px;
+  }
+</style><style type="text/css">
+  .statusMessage_3d2FTR {
+    margin-left: 15px;
+  }
+  .innerShift_3d2FTR {
+    padding: 2px;
+    margin-left: 10px;
+  }
+</style><style type="text/css">
+  .testTabView_3srnkd {}
+  .infoBox_3srnkd  {
+    margin: 5%;
+  }
+  .tests_3srnkd {}
+  .testList_3srnkd {
+    line-height: 2em;
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    max-height: 300px;
+    overflow-y: auto;
+
+  }
+  .container_3srnkd {
+    margin: 2%;
+    padding-bottom: 5%;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  .outputTitle_3srnkd {
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  .summaryTitle_3srnkd {
+    font-weight: bold;
+  }
+  .testPass_3srnkd {
+  }
+  .testLog_3srnkd {
+    margin-bottom: 1%;
+    border-radius: 4px;
+    padding: 1% 1% 1% 5%;
+  }
+  .testFailure_3srnkd {
+  }
+  .testFailureSummary_3srnkd {
+  }
+  .buttons_3srnkd {
+    margin: 5%;
+    display: flex;
+    align-items: center;
+  }
+  .runButton_3srnkd {
+    white-space: nowrap;
+  }
+  .generateTestFile_3srnkd {
+    margin-top: 20px;
+    min-width: 100px
+  }
+  .title_3srnkd {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+  .label_3srnkd {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+</style><style type="text/css">
+    .container_1PB2h1
+    {
+      display: none;
+      position: fixed;
+      border-radius: 2px;
+      z-index: 1000;
+      box-shadow: 0 0 4px var(--dark);
+    }
+    .liitem_1PB2h1
+    {
+      padding: 2px;
+      padding-left: 6px;
+      cursor: pointer;
+      color: var(--text-dark);
+      background-color: var(--light);
+    }
+    .liitem_1PB2h1:hover
+    {
+      background-color:  var(--secondary);
+    }
+    #menuitems
+    {
+      list-style: none;
+      margin: 0px;
+    }
+</style><style type="text/css">
+  .label_2ArcOJ {
+    margin-top        : 4px;
+  }
+  .leaf_2ArcOJ {
+    overflow          : hidden;
+    text-overflow     : ellipsis;
+    width             : 90%;
+    margin-bottom     : 0px;
+  }
+  .fileexplorer_2ArcOJ       {
+    box-sizing        : border-box;
+  }
+  input[type="file"] {
+      display: none;
+  }
+  .folder_2ArcOJ,
+  .file_2ArcOJ               {
+    font-size         : 14px;
+    cursor            : pointer;
+  }
+  .file_2ArcOJ               {
+    padding           : 4px;
+  }
+  .newFile_2ArcOJ            {
+    padding-right     : 10px;
+  }
+  .newFile_2ArcOJ i          {
+    cursor            : pointer;
+  }
+  .newFile_2ArcOJ:hover    {
+    transform         : scale(1.3);
+  }
+  .menu_2ArcOJ               {
+    margin-left       : 20px;
+  }
+  .items_2ArcOJ              {
+    display           : inline
+  }
+  .hasFocus_2ArcOJ           {
+  }
+  .rename_2ArcOJ             {
+  }
+  .remove_2ArcOJ             {
+    margin-left       : auto;
+    padding-left      : 5px;
+    padding-right     : 5px;
+  }
+  .activeMode_2ArcOJ         {
+    display           : flex;
+    width             : 100%;
+    margin-right      : 10px;
+    padding-right     : 19px;
+  }
+  .activeMode_2ArcOJ > div   {
+    min-width         : 10px;
+  }
+  ul                  {
+    padding           : 0;
+  }
+</style><style type="text/css">
+  .dialog_3fcRAD {
+    display: flex;
+    flex-direction: column;
+  }
+  .dialogParagraph_3fcRAD {
+    margin-bottom: 2em;
+    word-break: break-word;
+  }
+</style><style type="text/css">
+  .container_1UnAFT {
+    display           : flex;
+    flex-direction    : row;
+    width             : 100%;
+    height            : 100%;
+    box-sizing        : border-box;
+  }
+  .fileexplorer_1UnAFT       {
+    display           : flex;
+    flex-direction    : column;
+    position          : relative;
+    width             : 100%;
+    padding-left      : 6px;
+    padding-top       : 6px;
+  }
+  .fileExplorerTree_1UnAFT   {
+    cursor            : default;
+  }
+  .gist_1UnAFT            {
+    padding           : 10px;
+  }
+  .gist_1UnAFT i          {
+    cursor            : pointer;
+  }
+  .gist_1UnAFT i:hover    {
+    color             : orange;
+  }
+  .connectToLocalhost_1UnAFT {
+    padding           : 10px;
+  }
+  .connectToLocalhost_1UnAFT i {
+    cursor            : pointer;
+  }
+  .connectToLocalhost_1UnAFT i:hover   {
+    color             : var(--secondary)
+  }
+  .uploadFile_1UnAFT         {
+    padding           : 10px;
+  }
+  .uploadFile_1UnAFT label:hover   {
+    color             : var(--secondary)
+  }
+  .uploadFile_1UnAFT label   {
+    cursor            : pointer;
+  }
+  .treeview_1UnAFT {
+    overflow-y        : auto;
+  }  
+  .dialog_1UnAFT {
+    display: flex;
+    flex-direction: column;
+  }
+  .dialogParagraph_1UnAFT {
+    margin-bottom: 2em;
+    word-break: break-word;
+  }
+</style><style id="ace_editor.css">.ace_editor {position: relative;overflow: hidden;font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;direction: ltr;}.ace_scroller {position: absolute;overflow: hidden;top: 0;bottom: 0;background-color: inherit;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;cursor: text;}.ace_content {position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;min-width: 100%;}.ace_dragging .ace_scroller:before{position: absolute;top: 0;left: 0;right: 0;bottom: 0;content: '';background: rgba(250, 250, 250, 0.01);z-index: 1000;}.ace_dragging.ace_dark .ace_scroller:before{background: rgba(0, 0, 0, 0.01);}.ace_selecting, .ace_selecting * {cursor: text !important;}.ace_gutter {position: absolute;overflow : hidden;width: auto;top: 0;bottom: 0;left: 0;cursor: default;z-index: 4;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;}.ace_gutter-active-line {position: absolute;left: 0;right: 0;}.ace_scroller.ace_scroll-left {box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;}.ace_gutter-cell {padding-left: 19px;padding-right: 6px;background-repeat: no-repeat;}.ace_gutter-cell.ace_error {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: 2px center;}.ace_gutter-cell.ace_warning {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");background-position: 2px center;}.ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");background-position: 2px center;}.ace_dark .ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");}.ace_scrollbar {position: absolute;right: 0;bottom: 0;z-index: 6;}.ace_scrollbar-inner {position: absolute;cursor: text;left: 0;top: 0;}.ace_scrollbar-v{overflow-x: hidden;overflow-y: scroll;top: 0;}.ace_scrollbar-h {overflow-x: scroll;overflow-y: hidden;left: 0;}.ace_print-margin {position: absolute;height: 100%;}.ace_text-input {position: absolute;z-index: 0;width: 0.5em;height: 1em;opacity: 0;background: transparent;-moz-appearance: none;appearance: none;border: none;resize: none;outline: none;overflow: hidden;font: inherit;padding: 0 1px;margin: 0 -1px;text-indent: -1em;-ms-user-select: text;-moz-user-select: text;-webkit-user-select: text;user-select: text;white-space: pre!important;}.ace_text-input.ace_composition {background: inherit;color: inherit;z-index: 1000;opacity: 1;text-indent: 0;}.ace_layer {z-index: 1;position: absolute;overflow: hidden;word-wrap: normal;white-space: pre;height: 100%;width: 100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;pointer-events: none;}.ace_gutter-layer {position: relative;width: auto;text-align: right;pointer-events: auto;}.ace_text-layer {font: inherit !important;}.ace_cjk {display: inline-block;text-align: center;}.ace_cursor-layer {z-index: 4;}.ace_cursor {z-index: 4;position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;border-left: 2px solid;transform: translatez(0);}.ace_slim-cursors .ace_cursor {border-left-width: 1px;}.ace_overwrite-cursors .ace_cursor {border-left-width: 0;border-bottom: 1px solid;}.ace_hidden-cursors .ace_cursor {opacity: 0.2;}.ace_smooth-blinking .ace_cursor {-webkit-transition: opacity 0.18s;transition: opacity 0.18s;}.ace_editor.ace_multiselect .ace_cursor {border-left-width: 1px;}.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {position: absolute;z-index: 3;}.ace_marker-layer .ace_selection {position: absolute;z-index: 5;}.ace_marker-layer .ace_bracket {position: absolute;z-index: 6;}.ace_marker-layer .ace_active-line {position: absolute;z-index: 2;}.ace_marker-layer .ace_selected-word {position: absolute;z-index: 4;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}.ace_line .ace_fold {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: inline-block;height: 11px;margin-top: -2px;vertical-align: middle;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");background-repeat: no-repeat, repeat-x;background-position: center center, top left;color: transparent;border: 1px solid black;border-radius: 2px;cursor: pointer;pointer-events: auto;}.ace_dark .ace_fold {}.ace_fold:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");}.ace_tooltip {background-color: #FFF;background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));border: 1px solid gray;border-radius: 1px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);color: black;max-width: 100%;padding: 3px 4px;position: fixed;z-index: 999999;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;cursor: default;white-space: pre;word-wrap: break-word;line-height: normal;font-style: normal;font-weight: normal;letter-spacing: normal;pointer-events: none;}.ace_folding-enabled > .ace_gutter-cell {padding-right: 13px;}.ace_fold-widget {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;margin: 0 -12px 0 1px;display: none;width: 11px;vertical-align: top;background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: center;border-radius: 3px;border: 1px solid transparent;cursor: pointer;}.ace_folding-enabled .ace_fold-widget {display: inline-block;   }.ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");}.ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");}.ace_fold-widget:hover {border: 1px solid rgba(0, 0, 0, 0.3);background-color: rgba(255, 255, 255, 0.2);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);}.ace_fold-widget:active {border: 1px solid rgba(0, 0, 0, 0.4);background-color: rgba(0, 0, 0, 0.05);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);}.ace_dark .ace_fold-widget {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");}.ace_dark .ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget:hover {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);background-color: rgba(255, 255, 255, 0.1);}.ace_dark .ace_fold-widget:active {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);}.ace_fold-widget.ace_invalid {background-color: #FFB4B4;border-color: #DE5555;}.ace_fade-fold-widgets .ace_fold-widget {-webkit-transition: opacity 0.4s ease 0.05s;transition: opacity 0.4s ease 0.05s;opacity: 0;}.ace_fade-fold-widgets:hover .ace_fold-widget {-webkit-transition: opacity 0.05s ease 0.05s;transition: opacity 0.05s ease 0.05s;opacity:1;}.ace_underline {text-decoration: underline;}.ace_bold {font-weight: bold;}.ace_nobold .ace_bold {font-weight: normal;}.ace_italic {font-style: italic;}.ace_error-marker {background-color: rgba(255, 0, 0,0.2);position: absolute;z-index: 9;}.ace_highlight-marker {background-color: rgba(255, 255, 0,0.2);position: absolute;z-index: 8;}.ace_br1 {border-top-left-radius    : 3px;}.ace_br2 {border-top-right-radius   : 3px;}.ace_br3 {border-top-left-radius    : 3px; border-top-right-radius:    3px;}.ace_br4 {border-bottom-right-radius: 3px;}.ace_br5 {border-top-left-radius    : 3px; border-bottom-right-radius: 3px;}.ace_br6 {border-top-right-radius   : 3px; border-bottom-right-radius: 3px;}.ace_br7 {border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px;}.ace_br8 {border-bottom-left-radius : 3px;}.ace_br9 {border-top-left-radius    : 3px; border-bottom-left-radius:  3px;}.ace_br10{border-top-right-radius   : 3px; border-bottom-left-radius:  3px;}.ace_br11{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-left-radius:  3px;}.ace_br12{border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br13{border-top-left-radius    : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br14{border-top-right-radius   : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br15{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}
+/*# sourceURL=ace/css/ace_editor.css */</style><style id="ace-tm">.ace-tm .ace_gutter {background: #f0f0f0;color: #333;}.ace-tm .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-tm .ace_fold {background-color: #6B72E6;}.ace-tm {background-color: #FFFFFF;color: black;}.ace-tm .ace_cursor {color: black;}.ace-tm .ace_invisible {color: rgb(191, 191, 191);}.ace-tm .ace_storage,.ace-tm .ace_keyword {color: blue;}.ace-tm .ace_constant {color: rgb(197, 6, 11);}.ace-tm .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-tm .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-tm .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-tm .ace_invalid {background-color: rgba(255, 0, 0, 0.1);color: red;}.ace-tm .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-tm .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-tm .ace_support.ace_type,.ace-tm .ace_support.ace_class {color: rgb(109, 121, 222);}.ace-tm .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-tm .ace_string {color: rgb(3, 106, 7);}.ace-tm .ace_comment {color: rgb(76, 136, 107);}.ace-tm .ace_comment.ace_doc {color: rgb(0, 102, 255);}.ace-tm .ace_comment.ace_doc.ace_tag {color: rgb(128, 159, 191);}.ace-tm .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-tm .ace_variable {color: rgb(49, 132, 149);}.ace-tm .ace_xml-pe {color: rgb(104, 104, 91);}.ace-tm .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-tm .ace_heading {color: rgb(12, 7, 255);}.ace-tm .ace_list {color:rgb(185, 6, 144);}.ace-tm .ace_meta.ace_tag {color:rgb(0, 22, 142);}.ace-tm .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-tm .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-tm.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;}.ace-tm .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-tm .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-tm .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-tm .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-tm .ace_gutter-active-line {background-color : #dcdcdc;}.ace-tm .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-tm .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}
+/*# sourceURL=ace/css/ace-tm */</style><style>    .error_widget_wrapper {        background: inherit;        color: inherit;        border:none    }    .error_widget {        border-top: solid 2px;        border-bottom: solid 2px;        margin: 5px 0;        padding: 10px 40px;        white-space: pre-wrap;    }    .error_widget.ace_error, .error_widget_arrow.ace_error{        border-color: #ff5a5a    }    .error_widget.ace_warning, .error_widget_arrow.ace_warning{        border-color: #F1D817    }    .error_widget.ace_info, .error_widget_arrow.ace_info{        border-color: #5a5a5a    }    .error_widget.ace_ok, .error_widget_arrow.ace_ok{        border-color: #5aaa5a    }    .error_widget_arrow {        position: absolute;        border: solid 5px;        border-top-color: transparent!important;        border-right-color: transparent!important;        border-left-color: transparent!important;        top: -5px;    }</style><style>.ace_snippet-marker {    -moz-box-sizing: border-box;    box-sizing: border-box;    background: rgba(194, 193, 208, 0.09);    border: 1px dotted rgba(211, 208, 235, 0.62);    position: absolute;}</style><style>.ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line {    background-color: #CAD6FA;    z-index: 1;}.ace_editor.ace_autocomplete .ace_line-hover {    border: 1px solid #abbffe;    margin-top: -1px;    background: rgba(233,233,253,0.4);}.ace_editor.ace_autocomplete .ace_line-hover {    position: absolute;    z-index: 2;}.ace_editor.ace_autocomplete .ace_scroller {   background: none;   border: none;   box-shadow: none;}.ace_rightAlignedText {    color: gray;    display: inline-block;    position: absolute;    right: 4px;    text-align: right;    z-index: -1;}.ace_editor.ace_autocomplete .ace_completion-highlight{    color: #000;    text-shadow: 0 0 0.01em;}.ace_editor.ace_autocomplete {    width: 280px;    z-index: 200000;    background: #fbfbfb;    color: #444;    border: 1px lightgray solid;    position: fixed;    box-shadow: 2px 3px 5px rgba(0,0,0,.2);    line-height: 1.4;}</style><style id="ace_searchbox">.ace_search {background-color: #ddd;border: 1px solid #cbcbcb;border-top: 0 none;max-width: 325px;overflow: hidden;margin: 0;padding: 4px;padding-right: 6px;padding-bottom: 0;position: absolute;top: 0px;z-index: 99;white-space: normal;}.ace_search.left {border-left: 0 none;border-radius: 0px 0px 5px 0px;left: 0;}.ace_search.right {border-radius: 0px 0px 0px 5px;border-right: 0 none;right: 0;}.ace_search_form, .ace_replace_form {border-radius: 3px;border: 1px solid #cbcbcb;float: left;margin-bottom: 4px;overflow: hidden;}.ace_search_form.ace_nomatch {outline: 1px solid red;}.ace_search_field {background-color: white;border-right: 1px solid #cbcbcb;border: 0 none;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;float: left;height: 22px;outline: 0;padding: 0 7px;width: 214px;margin: 0;}.ace_searchbtn,.ace_replacebtn {background: #fff;border: 0 none;border-left: 1px solid #dcdcdc;cursor: pointer;float: left;height: 22px;margin: 0;position: relative;}.ace_searchbtn:last-child,.ace_replacebtn:last-child {border-top-right-radius: 3px;border-bottom-right-radius: 3px;}.ace_searchbtn:disabled {background: none;cursor: default;}.ace_searchbtn {background-position: 50% 50%;background-repeat: no-repeat;width: 27px;}.ace_searchbtn.prev {background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAYAAAB4ka1VAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADFJREFUeNpiSU1NZUAC/6E0I0yACYskCpsJiySKIiY0SUZk40FyTEgCjGgKwTRAgAEAQJUIPCE+qfkAAAAASUVORK5CYII=);    }.ace_searchbtn.next {background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAYAAAB4ka1VAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADRJREFUeNpiTE1NZQCC/0DMyIAKwGJMUAYDEo3M/s+EpvM/mkKwCQxYjIeLMaELoLMBAgwAU7UJObTKsvAAAAAASUVORK5CYII=);    }.ace_searchbtn_close {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAcCAYAAABRVo5BAAAAZ0lEQVR42u2SUQrAMAhDvazn8OjZBilCkYVVxiis8H4CT0VrAJb4WHT3C5xU2a2IQZXJjiQIRMdkEoJ5Q2yMqpfDIo+XY4k6h+YXOyKqTIj5REaxloNAd0xiKmAtsTHqW8sR2W5f7gCu5nWFUpVjZwAAAABJRU5ErkJggg==) no-repeat 50% 0;border-radius: 50%;border: 0 none;color: #656565;cursor: pointer;float: right;font: 16px/16px Arial;height: 14px;margin: 5px 1px 9px 5px;padding: 0;text-align: center;width: 14px;}.ace_searchbtn_close:hover {background-color: #656565;background-position: 50% 100%;color: white;}.ace_replacebtn.prev {width: 54px}.ace_replacebtn.next {width: 27px}.ace_button {margin-left: 2px;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-o-user-select: none;-ms-user-select: none;user-select: none;overflow: hidden;opacity: 0.7;border: 1px solid rgba(100,100,100,0.23);padding: 1px;-moz-box-sizing: border-box;box-sizing:    border-box;color: black;}.ace_button:hover {background-color: #eee;opacity:1;}.ace_button:active {background-color: #ddd;}.ace_button.checked {border-color: #3399ff;opacity:1;}.ace_search_options{margin-bottom: 3px;text-align: right;-webkit-user-select: none;-moz-user-select: none;-o-user-select: none;-ms-user-select: none;user-select: none;}
+/*# sourceURL=ace/css/ace_searchbox */</style><style type="text/css">
+  .ace-editor_2ylRCR {
+    width     : 100%;
+  }
+</style><style> .ace-tm .ace_gutter, .ace-tm .ace_gutter-active-line, .ace-tm .ace_marker-layer .ace_active-line { background-color: var(--secondary); } .ace_gutter-cell.ace_breakpoint{ background-color: var(--secondary); } </style><style type="text/css">
+  .popup_2V1R6E             {
+    position         : absolute;
+    text-align       : left;
+    display          : none;
+    width            : 95%;
+    font-family      : monospace;
+    background-color : var(--secondary);
+    overflow         : auto;
+    padding-bottom   : 13px;
+    z-index          : 80;
+    bottom           : 1em;
+    border-width     : 4px;
+    left             : 2em;
+  }
+
+  .autoCompleteItem_2V1R6E {
+    padding          : 4px;
+    border-radius    : 2px;
+  }
+
+  .popup_2V1R6E a {
+    cursor           : pointer;
+  }
+
+  .listHandlerShow_2V1R6E   {
+    display          : block;
+  }
+
+  .listHandlerHide_2V1R6E   {
+    display          : none;
+  }
+
+  .listHandlerButtonShow_2V1R6E {
+    position         : fixed;
+    width            : 46%;
+  }
+
+  .pageNumberAlignment_2V1R6E {
+    font-size        : 10px;
+    float            : right;
+  }
+
+  .modalContent_2V1R6E {
+    position         : absolute;
+    margin-left      : 20%;
+    margin-bottom    : 32px;
+    bottom           : 0px;
+    padding          : 0;
+    line-height      : 18px;
+    font-size        : 12px;
+    width            : 40%;
+    box-shadow       : 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 0.4s;
+    animation-name   : animatetop_2V1R6E;
+    animation-duration: 0.4s
+  }
+
+  @-webkit-keyframes animatetop_2V1R6E {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+  }
+
+  @keyframes animatetop_2V1R6E {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+  }
+</style><style type="text/css">
+  .log_7Xiho {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    cursor: pointer;
+  }
+  .log_7Xiho:hover {
+    opacity: 0.8;
+  }
+  .arrow_7Xiho {
+    color: var(--text-info);
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    margin-left: 10px;
+  }
+  .arrow_7Xiho:hover {
+    color: var(--secondary);
+  }
+  .txLog_7Xiho {
+  }
+  .txStatus_7Xiho {
+    display: flex;
+    font-size: 20px;
+    margin-right: 20px;
+    float: left;
+  }
+  .succeeded_7Xiho {
+    color: var(--success);
+  }
+  .failed_7Xiho {
+    color: var(--danger);
+  }
+  .notavailable_7Xiho {
+  }
+  .call_7Xiho {
+    font-size: 7px;
+    border-radius: 50%;
+    min-width: 20px;
+    min-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-info);
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .txItem_7Xiho {
+    color: var(--text-info);
+    margin-right: 5px;
+    float: left;
+  }
+  .txItemTitle_7Xiho {
+    font-weight: bold;
+  }
+  .tx_7Xiho {
+    color: var(--text-info);
+    font-weight: bold;
+    float: left;
+    margin-right: 10px;
+  }
+  .txTable_7Xiho,
+  .tr_7Xiho,
+  .td_7Xiho {
+    border-collapse: collapse;
+    font-size: 10px;
+    color: var(--text-info);
+    border: 1px solid var(--text-info);
+  }
+  #txTable {
+    margin-top: 1%;
+    margin-bottom: 5%;
+    align-self: center;
+    width: 85%;
+  }
+  .tr_7Xiho, .td_7Xiho {
+    padding: 4px;
+    vertical-align: baseline;
+  }
+  .td_7Xiho:first-child {
+    min-width: 30%;
+    width: 30%;
+    align-items: baseline;
+    font-weight: bold;
+  }
+  .tableTitle_7Xiho {
+    width: 25%;
+  }
+  .buttons_7Xiho {
+    display: flex;
+    margin-left: auto;
+  }
+  .debug_7Xiho {
+    white-space: nowrap;
+  }
+  .debug_7Xiho:hover {
+    opacity: 0.8;
+  }</style><style type="text/css">
+  .panel_nF0zh              {
+    position          : relative;
+    display           : flex;
+    flex-direction    : column;
+    font-size         : 12px;
+    min-height        : 3em;
+  }
+  .bar_nF0zh                {
+    display           : flex;
+    z-index           : 2;
+  }
+  .menu_nF0zh               {
+    position             : relative;
+    display              : flex;
+    align-items          : center;
+    width                : 100%;
+    max-height           : 35px;
+    min-height           : 35px;
+  }
+  .clear_nF0zh           {
+    margin-right      : 20px;
+    width             : 10px;
+    cursor            : pointer;
+    display           : flex;
+  }
+  .clear_nF0zh:hover              {
+    color             : var(--secondary);
+  }
+  .toggleTerminal_nF0zh              {
+    margin-right      : 20px;
+    margin-left       : 2px;
+    font-size         : 14px;
+    font-weight       : bold;
+    cursor            : pointer;
+  }
+  .toggleTerminal_nF0zh:hover              {
+    color             : var(--secondary);
+  }
+  .terminal_container_nF0zh   {
+    display             : flex;
+    flex-direction      : column;
+    height              : 100%;
+    overflow-y          : auto;
+    font-family         : monospace;
+    margin              : 0px;
+    background-image    : url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCgk8ZyBvcGFjaXR5PSIwLjEiPg0KCQk8Zz4NCgkJCTxwYXRoIGZpbGw9IiM0MTQwNDIiIGQ9Ik03MC41ODIsNDI4LjkwNGMwLjgxMSwwLDEuNjIyLDAuMjg1LDIuNDM3LDAuODUzYzAuODExLDAuNTcxLDEuMjE4LDEuMzQsMS4yMTgsMi4zMTQNCgkJCQljMCwyLjI3Ny0xLjA1OSwzLjQ5Ni0zLjE2OCwzLjY1NmMtNS4wMzgsMC44MTQtOS4zODEsMi4zNTYtMTMuMDM3LDQuNjNjLTMuNjU1LDIuMjc2LTYuNjYzLDUuMTE3LTkuMDE2LDguNTI4DQoJCQkJYy0yLjM1NywzLjQxMS00LjEwNCw3LjI3Mi01LjIzOSwxMS41NzVjLTEuMTM5LDQuMzA3LTEuNzA2LDguODE0LTEuNzA2LDEzLjUyNHYzMi42NTNjMCwyLjI3My0xLjEzOSwzLjQxMS0zLjQxMiwzLjQxMQ0KCQkJCWMtMi4yNzcsMC0zLjQxMi0xLjEzOC0zLjQxMi0zLjQxMXYtNzQuMzIzYzAtMi4yNzMsMS4xMzUtMy40MTEsMy40MTItMy40MTFjMi4yNzMsMCwzLjQxMiwxLjEzOCwzLjQxMiwzLjQxMXYxNS4xMDgNCgkJCQljMS40NjItMi40MzcsMy4yMDYtNC43NTIsNS4yMzktNi45NDVjMi4wMjktMi4xOTMsNC4yNjQtNC4xNDMsNi43MDEtNS44NDhjMi40MzctMS43MDYsNS4wNzYtMy4wODUsNy45MTktNC4xNDMNCgkJCQlDNjQuNzcxLDQyOS40MzMsNjcuNjU4LDQyOC45MDQsNzAuNTgyLDQyOC45MDR6Ii8+DQoJCQk8cGF0aCBmaWxsPSIjNDE0MDQyIiBkPSJNMTM3Ljc3Myw0MjcuMTk4YzUuNjg1LDAsMTAuOTY2LDEuMTgxLDE1LjgzOSwzLjUzNGM0Ljg3NCwyLjM1Niw5LjA1NSw1LjQ4MiwxMi41NSw5LjM4MQ0KCQkJCWMzLjQ5MiwzLjg5OSw2LjIxNCw4LjQwNyw4LjE2NCwxMy41MjRjMS45NDksNS4xMTcsMi45MjQsMTAuNDQsMi45MjQsMTUuOTYxYzAsMC45NzYtMC4zNjYsMS43OS0xLjA5NywyLjQzOA0KCQkJCWMtMC43MzEsMC42NS0xLjU4MywwLjk3NS0yLjU1OSwwLjk3NWgtNjcuOTg3YzAuNDg3LDQuMjI2LDEuNTg0LDguMjg1LDMuMjksMTIuMTg0YzEuNzA2LDMuODk5LDMuOTM3LDcuMzEyLDYuNzAxLDEwLjIzNA0KCQkJCWMyLjc2MSwyLjkyNSw2LjAwOCw1LjI4MSw5Ljc0OCw3LjA2N2MzLjczNSwxLjc4OSw3Ljg3NywyLjY4MSwxMi40MjgsMi42ODFjMTIuMDIxLDAsMjEuMzYtNC43OSwyOC4wMjMtMTQuMzc3DQoJCQkJYzAuNjQ3LTEuMTM2LDEuNjIyLTEuNzA2LDIuOTI0LTEuNzA2YzIuMjczLDAsMy40MTIsMS4xMzksMy40MTIsMy40MTJjMCwwLjE2My0wLjE2NCwwLjczLTAuNDg3LDEuNzA1DQoJCQkJYy0zLjQxMiw2LjAxMy04LjIwNSwxMC40NzktMTQuMzc3LDEzLjQwMmMtNi4xNzYsMi45MjQtMTIuNjcxLDQuMzg3LTE5LjQ5NSw0LjM4N2MtNS42ODksMC0xMC45MjgtMS4xODEtMTUuNzE4LTMuNTMzDQoJCQkJYy00Ljc5My0yLjM1NC04LjkzNi01LjQ4My0xMi40MjgtOS4zODJjLTMuNDk1LTMuODk5LTYuMjE0LTguNDA3LTguMTYzLTEzLjUyNGMtMS45NS01LjExOC0yLjkyNC0xMC40MzctMi45MjQtMTUuOTYyDQoJCQkJYzAtNS41MjEsMC45NzUtMTAuODQ0LDIuOTI0LTE1Ljk2MWMxLjk0OS01LjExNyw0LjY2OC05LjYyNSw4LjE2My0xMy41MjRjMy40OTItMy44OTgsNy42MzQtNy4wMjQsMTIuNDI4LTkuMzgxDQoJCQkJQzEyNi44NDYsNDI4LjM3OSwxMzIuMDg0LDQyNy4xOTgsMTM3Ljc3Myw0MjcuMTk4eiBNMTY5Ljk0LDQ2Ni4xODhjLTAuMzI4LTQuMjIzLTEuMzQxLTguMjg1LTMuMDQ2LTEyLjE4NA0KCQkJCWMtMS43MDYtMy44OTktMy45ODItNy4zMTItNi44MjMtMTAuMjM1Yy0yLjg0NC0yLjkyNC02LjE3NS01LjI3Ny05Ljk5MS03LjA2N2MtMy44MTktMS43ODUtNy45Mi0yLjY4LTEyLjMwNi0yLjY4DQoJCQkJYy00LjU1LDAtOC42OTIsMC44OTUtMTIuNDI4LDIuNjhjLTMuNzM5LDEuNzktNi45ODcsNC4xNDQtOS43NDgsNy4wNjdjLTIuNzY0LDIuOTI0LTQuOTk1LDYuMzM2LTYuNzAxLDEwLjIzNQ0KCQkJCWMtMS43MDYsMy44OTgtMi44MDIsNy45NjEtMy4yOSwxMi4xODRIMTY5Ljk0eiIvPg0KCQkJPHBhdGggZmlsbD0iIzQxNDA0MiIgZD0iTTMwNC42OSw0MjcuNDQxYzUuMDM0LDAsOS41MDQsMS4wMTgsMTMuNDAyLDMuMDQ3YzMuODk5LDIuMDMzLDcuMTg5LDQuNjcyLDkuODcsNy45Mg0KCQkJCWMyLjY4LDMuMjUxLDQuNzA5LDcuMDY2LDYuMDkyLDExLjQ1MmMxLjM3OSw0LjM4NywyLjA3LDguODU2LDIuMDcsMTMuNDAydjQzLjYyYzAsMC45NzUtMC4zNjUsMS43ODktMS4wOTcsMi40MzgNCgkJCQljLTAuNzMsMC42NDYtMS41MDMsMC45NzUtMi4zMTMsMC45NzVjLTIuMjc2LDAtMy40MTItMS4xNC0zLjQxMi0zLjQxMnYtNDMuNjJjMC0zLjU3MS0wLjUyOS03LjEwNC0xLjU4NC0xMC42DQoJCQkJYy0xLjA1OS0zLjQ5MS0yLjYwMi02LjYxOC00LjYzLTkuMzgyYy0yLjAzMy0yLjc2MS00LjU5Mi00Ljk1My03LjY3Ny02LjU4Yy0zLjA4OC0xLjYyMS02LjY2Mi0yLjQzNi0xMC43MjItMi40MzYNCgkJCQljLTUuMiwwLTkuNTg3LDEuMjE4LTEzLjE1OSwzLjY1NGMtMy41NzQsMi40MzgtNi40NTcsNS41NjYtOC42NSw5LjM4MmMtMi4xOTMsMy44MTktMy44MTgsOC4wNDItNC44NzQsMTIuNjcyDQoJCQkJYy0xLjA1OSw0LjYzLTEuNTg0LDkuMDU4LTEuNTg0LDEzLjI4djMzLjYyOWMwLDAuOTc1LTAuMzY1LDEuNzg5LTEuMDk2LDIuNDM4Yy0wLjczMSwwLjY0Ni0xLjUwNSwwLjk3NS0yLjMxNSwwLjk3NQ0KCQkJCWMtMi4yNzYsMC0zLjQxMS0xLjE0LTMuNDExLTMuNDEydi00My42MmMwLTMuNTcxLTAuNTMtNy4xMDQtMS41ODUtMTAuNmMtMS4wNTgtMy40OTEtMi42MDEtNi42MTgtNC42MjktOS4zODINCgkJCQljLTIuMDM0LTIuNzYxLTQuNTkyLTQuOTUzLTcuNjc3LTYuNThjLTMuMDg3LTEuNjIxLTYuNjYzLTIuNDM2LTEwLjcyMi0yLjQzNmMtNS4wMzcsMC05LjM0NCwwLjg5NS0xMi45MTUsMi42OA0KCQkJCWMtMy41NzUsMS43OS02LjU0Miw0LjI2Ni04Ljg5NSw3LjQzM2MtMi4zNTcsMy4xNjctNC4wNjMsNi45NDQtNS4xMTcsMTEuMzMxYy0xLjA1OSw0LjM4Ni0xLjU4NCw5LjEtMS41ODQsMTQuMTM0djMuODk5djAuMjQzDQoJCQkJdjMyLjg5N2MwLDIuMjcyLTEuMTM4LDMuNDEyLTMuNDEyLDMuNDEyYy0yLjI3NiwwLTMuNDExLTEuMTQtMy40MTEtMy40MTJ2LTc0LjU2N2MwLTIuMjczLDEuMTM1LTMuNDExLDMuNDExLTMuNDExDQoJCQkJYzIuMjczLDAsMy40MTIsMS4xMzgsMy40MTIsMy40MTF2MTIuNDI4YzIuOTI0LTUuMTk3LDYuODYxLTkuMzgyLDExLjgxOS0xMi41NWM0Ljk1NC0zLjE2NywxMC41MTctNC43NTIsMTYuNjkyLTQuNzUyDQoJCQkJYzYuOTgzLDAsMTIuOTk1LDEuOTkxLDE4LjAzMiw1Ljk3YzUuMDMzLDMuOTgzLDguNjg4LDkuMjIzLDEwLjk2NiwxNS43MTljMi43Ni02LjMzNiw2LjczOS0xMS41MzMsMTEuOTQtMTUuNTk2DQoJCQkJQzI5MS4xMjUsNDI5LjQ3NSwyOTcuMzgsNDI3LjQ0MSwzMDQuNjksNDI3LjQ0MXoiLz4NCgkJCTxwYXRoIGZpbGw9IiM0MTQwNDIiIGQ9Ik0zNzguNzUzLDQyOS4zOTJjMC44MTEsMCwxLjU4NCwwLjM2NSwyLjMxNCwxLjA5N2MwLjczMSwwLjczLDEuMDk3LDEuNTA0LDEuMDk3LDIuMzE0djc0LjA4DQoJCQkJYzAsMC44MTQtMC4zNjUsMS41ODQtMS4wOTcsMi4zMTVjLTAuNzMsMC43My0xLjUwNCwxLjA5Ny0yLjMxNCwxLjA5N2MtMC45NzUsMC0xLjc5LTAuMzY2LTIuNDM4LTEuMDk3DQoJCQkJYy0wLjY1LTAuNzMxLTAuOTc1LTEuNTAxLTAuOTc1LTIuMzE1di03NC4wOGMwLTAuODExLDAuMzI0LTEuNTg0LDAuOTc1LTIuMzE0QzM3Ni45NjMsNDI5Ljc1NywzNzcuNzc4LDQyOS4zOTIsMzc4Ljc1Myw0MjkuMzkyeiINCgkJCQkvPg0KCQkJPHBhdGggZmlsbD0iIzQxNDA0MiIgZD0iTTQ3My4zNCw0MjguNjZjMi4yNzMsMCwzLjQxMiwxLjEzOSwzLjQxMiwzLjQxMWwtMC40ODcsMS45NWwtMjQuMzY4LDM1LjMzNGwyNC4zNjgsMzUuNTc3DQoJCQkJYzAuMzIzLDAuOTc2LDAuNDg3LDEuNjI2LDAuNDg3LDEuOTVjMCwyLjI3Mi0xLjEzOSwzLjQxMi0zLjQxMiwzLjQxMmMtMS4zMDIsMC0yLjE5My0wLjQ4OC0yLjY4LTEuNDYzbC0yMi45MDYtMzMuMzg0DQoJCQkJbC0yMi42NjMsMzMuMzg0Yy0wLjgxNCwwLjk3NS0xLjc5LDEuNDYzLTIuOTI0LDEuNDYzYy0yLjI3NywwLTMuNDExLTEuMTQtMy40MTEtMy40MTJjMC0wLjMyNCwwLjE1OS0wLjk3NSwwLjQ4Ni0xLjk1DQoJCQkJbDI0LjM2OS0zNS41NzdsLTI0LjM2OS0zNS4zMzRsLTAuNDg2LTEuOTVjMC0yLjI3MiwxLjEzNC0zLjQxMSwzLjQxMS0zLjQxMWMxLjEzNCwwLDIuMTA5LDAuNDg3LDIuOTI0LDEuNDYybDIyLjY2MywzMy4xNDENCgkJCQlsMjIuOTA2LTMzLjE0MUM0NzEuMTQ2LDQyOS4xNDcsNDcyLjAzOCw0MjguNjYsNDczLjM0LDQyOC42NnoiLz4NCgkJPC9nPg0KCQk8Zz4NCgkJCTxnPg0KCQkJCTxnIG9wYWNpdHk9IjAuNDUiPg0KCQkJCQk8Zz4NCgkJCQkJCTxwb2x5Z29uIGZpbGw9IiMwMTAxMDEiIHBvaW50cz0iMTUwLjczNCwxOTYuMjEyIDI1NS45NjksMzQ0LjUwOCAyNTUuOTY5LDI1OC4zODciLz4NCgkJCQkJPC9nPg0KCQkJCTwvZz4NCgkJCQk8ZyBvcGFjaXR5PSIwLjgiPg0KCQkJCQk8Zz4NCgkJCQkJCTxwb2x5Z29uIGZpbGw9IiMwMTAxMDEiIHBvaW50cz0iMjU1Ljk2OSwyNTguMzg3IDI1NS45NjksMzQ0LjUwOCAzNjEuMjY3LDE5Ni4yMTIiLz4NCgkJCQkJPC9nPg0KCQkJCTwvZz4NCgkJCQk8ZyBvcGFjaXR5PSIwLjYiPg0KCQkJCQk8Zz4NCgkJCQkJCTxwb2x5Z29uIGZpbGw9IiMwMTAxMDEiIHBvaW50cz0iMjU1Ljk2OSwxMjYuNzgxIDE1MC43MzMsMTc0LjYxMSAyNTUuOTY5LDIzNi44MTggMzYxLjIwNCwxNzQuNjExIi8+DQoJCQkJCTwvZz4NCgkJCQk8L2c+DQoJCQkJPGcgb3BhY2l0eT0iMC40NSI+DQoJCQkJCTxnPg0KCQkJCQkJPHBvbHlnb24gZmlsbD0iIzAxMDEwMSIgcG9pbnRzPSIxNTAuNzM0LDE3NC42MTIgMjU1Ljk2OSwyMzYuODE4IDI1NS45NjksMTI2Ljc4MiAyNTUuOTY5LDAuMDAxIi8+DQoJCQkJCTwvZz4NCgkJCQk8L2c+DQoJCQkJPGcgb3BhY2l0eT0iMC44Ij4NCgkJCQkJPGc+DQoJCQkJCQk8cG9seWdvbiBmaWxsPSIjMDEwMTAxIiBwb2ludHM9IjI1NS45NjksMCAyNTUuOTY5LDEyNi43ODEgMjU1Ljk2OSwyMzYuODE4IDM2MS4yMDQsMTc0LjYxMSIvPg0KCQkJCQk8L2c+DQoJCQkJPC9nPg0KCQkJPC9nPg0KCQk8L2c+DQoJPC9nPg0KPC9zdmc+DQo=')
+    background-repeat   : no-repeat;
+    background-position : center 15%;
+    background-size     : auto calc(75% -  1.7em);
+  }
+  .terminal_nF0zh    {
+    position          : relative;
+    display           : flex;
+    flex-direction    : column;
+    height            : 100%;
+  }
+  .journal_nF0zh            {
+    margin-top        : auto;
+    font-family       : monospace;
+  }
+  .block_nF0zh              {
+    word-break        : break-all;
+    white-space       : pre-wrap;
+    line-height       : 2ch;
+    padding           : 1ch;
+    margin-top        : 2ch;
+  }
+  .cli_nF0zh                {
+    line-height       : 1.7em;
+    font-family       : monospace;
+    padding           : .4em;
+    color             : var(--primary)
+    border-top        : solid 2px var(--secondary);
+  }
+  .prompt_nF0zh             {
+    margin-right      : 0.5em;
+    font-family       : monospace;
+    font-weight       : bold;
+    font-size         : 14px;
+  }
+  .input_nF0zh              {
+    word-break        : break-all;
+    outline           : none;
+    font-family       : monospace;
+  }
+  .search_nF0zh {
+    display           : flex;
+    align-items       : center;
+    width             : 330px;
+    padding-left      : 20px;
+    height            : 100%;
+    padding-top       : 1px;
+    padding-bottom    : 1px;
+  }
+  .filter_nF0zh                       {
+    padding-right               : 0px;
+    margin-right                : 0px;
+    height                      : 100%;
+    white-space                 : nowrap;
+    overflow                    : hidden;
+    text-overflow               : ellipsis;
+  }
+  .searchIcon_nF0zh                   {
+    height                      : 100%;
+    width                       : 25px;
+    border-top-left-radius      : 3px;
+    border-bottom-left-radius   : 3px;
+    display                     : flex;
+    align-items                 : center;
+    justify-content             : center;
+    margin-right                : 5px;
+  }
+  .listen_nF0zh         {
+    margin-right  : 30px;
+    min-width     : 40px;
+    height        : 13px;
+    display       : flex;
+    align-items   : center;
+  }
+  .listenLabel_nF0zh {
+    min-width: 50px;
+  }
+  .verticalLine_nF0zh {
+    border-left       : 1px solid var(--secondary)
+    height            : 65%;
+  }
+  .listenOnNetworkLabel_nF0zh {
+    white-space       : nowrap;
+  }
+  .pendingTx_nF0zh {
+    border-radius     : 50%;
+    margin-right      : 30px;
+    min-width         : 13px;
+    height            : 13px;
+    display           : flex;
+    justify-content   : center;
+    align-items       : center;
+    font-size         : 14px;
+    user-select       : none;
+  }
+  .dragbarHorizontal_nF0zh  {
+    position          : absolute;
+    top               : 0;
+    height            : 0.5em;
+    right             : 0;
+    left              : 0;
+    cursor            : ns-resize;
+    z-index           : 999;
+  }
+  .ghostbar_nF0zh           {
+    position          : absolute;
+    height            : 6px;
+    opacity           : 0.5;
+    cursor            : row-resize;
+    z-index           : 9999;
+    left              : 0;
+    right             : 0;
+  }
+</style><style type="text/css">
+  html { box-sizing: border-box; }
+  *, *:before, *:after { box-sizing: inherit; }
+  body                 {
+    /* font: 14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif; */
+    font-size          : .8rem;
+  }
+  pre {
+    overflow-x: auto;
+  }
+  .remixIDE_RSExR            {
+    width              : 100vw;
+    height             : 100vh;
+    overflow           : hidden;
+    flex-direction     : row;
+    display            : flex;
+  }
+  .mainpanel_RSExR           {
+    display            : flex;
+    flex-direction     : column;
+    overflow           : hidden;
+    flex               : 1;
+  }
+  .iconpanel_RSExR           {
+    display            : flex;
+    flex-direction     : column;
+    overflow           : hidden;
+    width              : 50px;
+    user-select        : none;
+  }
+  .sidepanel_RSExR           {
+    display            : flex;
+    flex-direction     : row-reverse;
+    width              : 320px;
+  }
+  .highlightcode_RSExR       {
+    position           : absolute;
+    z-index            : 20;
+    background-color   : var(--info);
+  }
+  .highlightcode_fullLine_RSExR {
+    position           : absolute;
+    z-index            : 20;
+    background-color   : var(--info);
+    opacity            : 0.5;
+  }
+  .centered_RSExR {
+    position           : fixed;
+    top                : 20%;
+    left               : 45%;
+    width              : 200px;
+    height             : 200px;
+  }
+  .centered_RSExR svg path {
+    fill: var(--secondary);
+  }
+  .centered_RSExR svg polygon {
+    fill: var(--secondary);
+  }
+</style><style type="text/css">
+      .anchor_stNQn            {
+        position         : static;
+        border-top       : 2px dotted blue;
+        height           : 10px;
+      }
+      .overlay_stNQn           {
+        position         : absolute;
+        width            : 100%;
+        display          : flex;
+        align-items      : center;
+        justify-content  : center;
+        bottom           : 0;
+        right            : 15px;
+        min-height       : 20px;
+      }
+      .text_stNQn              {
+        z-index          : 2;
+        color            : black;
+        font-weight      : bold;
+        pointer-events   : none;
+      }
+      .background_stNQn        {
+        z-index          : 1;
+        opacity          : 0.8;
+        background-color : #a6aeba;
+        cursor           : pointer;
+      }
+      .ul_stNQn                 {
+        padding-left     : 20px;
+        padding-bottom   : 5px;
+      }
+    </style><style>
+.sol.success,
+.sol.error,
+.sol.staticAnalysisWarning,
+.sol.warning { white-space: pre-line; word-wrap: break-word; cursor: pointer; position: relative; margin: 0.5em 0 1em 0; border-radius: 5px; line-height: 20px; padding: 8px 15px;
+} .sol.success pre,
+.sol.error pre,
+.sol.staticAnalysisWarning pre,
+.sol.warning pre { white-space: pre-line; overflow-y: hidden; background-color: transparent; margin: 0; font-size: 12px; border: 0 none; padding: 0; border-radius: 0;
+} .sol.success .close,
+.sol.staticAnalysisWarning .close,
+.sol.error .close,
+.sol.warning .close { white-space: pre-line; font-weight: bold; position: absolute; color: hsl(0, 0%, 0%); /* black in style-guide.js */ top: 0; right: 0; padding: 0.5em;
+} .sol.error {
+} .sol.warning {
+} .sol.staticAnalysisWarning {
+} .sol.success { /* background-color: // styles.rightPanel.message_Success_BackgroundColor; */
+}</style><style id="ace-chrome">.ace-chrome .ace_gutter {background: #ebebeb;color: #333;overflow : hidden;}.ace-chrome .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-chrome {background-color: #FFFFFF;color: black;}.ace-chrome .ace_cursor {color: black;}.ace-chrome .ace_invisible {color: rgb(191, 191, 191);}.ace-chrome .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-chrome .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-chrome .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-chrome .ace_invalid {background-color: rgb(153, 0, 0);color: white;}.ace-chrome .ace_fold {}.ace-chrome .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-chrome .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-chrome .ace_support.ace_type,.ace-chrome .ace_support.ace_class.ace-chrome .ace_support.ace_other {color: rgb(109, 121, 222);}.ace-chrome .ace_variable.ace_parameter {font-style:italic;color:#FD971F;}.ace-chrome .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-chrome .ace_comment {color: #236e24;}.ace-chrome .ace_comment.ace_doc {color: #236e24;}.ace-chrome .ace_comment.ace_doc.ace_tag {color: #236e24;}.ace-chrome .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-chrome .ace_variable {color: rgb(49, 132, 149);}.ace-chrome .ace_xml-pe {color: rgb(104, 104, 91);}.ace-chrome .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-chrome .ace_heading {color: rgb(12, 7, 255);}.ace-chrome .ace_list {color:rgb(185, 6, 144);}.ace-chrome .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-chrome .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-chrome .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-chrome .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-chrome .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-chrome .ace_gutter-active-line {background-color : #dcdcdc;}.ace-chrome .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-chrome .ace_storage,.ace-chrome .ace_keyword,.ace-chrome .ace_meta.ace_tag {color: rgb(147, 15, 128);}.ace-chrome .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-chrome .ace_string {color: #1A1AA6;}.ace-chrome .ace_entity.ace_other.ace_attribute-name {color: #994409;}.ace-chrome .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}
+/*# sourceURL=ace/css/ace-chrome */</style></head>
+<body>
+<script>
+				function  urlParams () {
+					var qs = window.location.hash.substr(1)
+
+					if (window.location.search.length > 0) {
+						// use legacy query params instead of hash
+						window.location.hash = window.location.search.substr(1)
+						window.location.search = ''
+					}
+
+					var params = {}
+					var parts = qs.split('&')
+					for (var x in parts) {
+						var keyValue = parts[x].split('=')
+						if (keyValue[0] !== '') {
+							params[keyValue[0]] = keyValue[1]
+						}
+					}	
+					return params
+				}
+        const defaultVersion = '0.8.0'
+        let versionToLoad = urlParams().appVersion ? urlParams().appVersion : defaultVersion
+                
+				let assets = {
+						'0.8.0': ['https://use.fontawesome.com/releases/v5.8.1/css/all.css', 'assets/css/pygment_trac.css'],
+						'0.7.7': ['assets/css/font-awesome.min.css', 'assets/css/pygment_trac.css']
+				}
+				let versions = {
+						'0.7.7': 'assets/js/0.7.7/app.js', // commit 7b5c7ae3de935e0ccc32eadfd83bf7349478491e
+						'0.8.0': 'build/app.js'
+				}
+				for (let k in assets[versionToLoad]) {
+          let app = document.createElement('link')
+          app.setAttribute('rel', 'stylesheet')
+          app.setAttribute('href', assets[versionToLoad][k])
+          if (assets[versionToLoad][k] === 'https://use.fontawesome.com/releases/v5.8.1/css/all.css') {
+            app.setAttribute('integrity', 'sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf')
+            app.setAttribute('crossorigin', 'anonymous')
+          }
+          document.head.appendChild(app)
+        }
+				window.onload = () => {
+					BrowserFS.install(window)
+					BrowserFS.configure({
+						fs: "LocalStorage"
+					}, function(e) {
+						if (e) console.log(e)
+						let app = document.createElement('script')
+						app.setAttribute('src', versions[versionToLoad])
+						document.body.appendChild(app)
+						window.remixFileSystem = require('fs')
+					})
+				}				
+		</script>
+
+
+<script src="./Ownable_files/app.js.download"></script><div style="visibility: visible;" data-id="remixIDE" class="remixIDE_RSExR"><div id="icon-panel" data-id="remixIdeIconPanel" class="iconpanel_RSExR bg-light"><div class="icons_2aGKki"><div plugin="home" title="Home" data-id="verticalIconsHomeIcon" class="homeIcon_2aGKki"><svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 105 100"><title>remix_logo1</title><path d="M91.84,35a.09.09,0,0,1-.1-.07,41,41,0,0,0-79.48,0,.09.09,0,0,1-.1.07C9.45,35,1,35.35,1,42.53c0,8.56,1,16,6,20.32,2.16,1.85,5.81,2.3,9.27,2.22a44.4,44.4,0,0,0,6.45-.68.09.09,0,0,0,.06-.15A34.81,34.81,0,0,1,17,45c0-.1,0-.21,0-.31a35,35,0,0,1,70,0c0,.1,0,.21,0,.31a34.81,34.81,0,0,1-5.78,19.24.09.09,0,0,0,.06.15,44.4,44.4,0,0,0,6.45.68c3.46.08,7.11-.37,9.27-2.22,5-4.27,6-11.76,6-20.32C103,35.35,94.55,35,91.84,35Z"></path><path d="M52,74,25.4,65.13a.1.1,0,0,0-.1.17L51.93,91.93a.1.1,0,0,0,.14,0L78.7,65.3a.1.1,0,0,0-.1-.17L52,74A.06.06,0,0,1,52,74Z"></path><path d="M75.68,46.9,82,45a.09.09,0,0,0,.08-.09,29.91,29.91,0,0,0-.87-6.94.11.11,0,0,0-.09-.08l-6.43-.58a.1.1,0,0,1-.06-.18l4.78-4.18a.13.13,0,0,0,0-.12,30.19,30.19,0,0,0-3.65-6.07.09.09,0,0,0-.11,0l-5.91,2a.1.1,0,0,1-.12-.14L72.19,23a.11.11,0,0,0,0-.12,29.86,29.86,0,0,0-5.84-4.13.09.09,0,0,0-.11,0l-4.47,4.13a.1.1,0,0,1-.17-.07l.09-6a.1.1,0,0,0-.07-.1,30.54,30.54,0,0,0-7-1.47.1.1,0,0,0-.1.07l-2.38,5.54a.1.1,0,0,1-.18,0l-2.37-5.54a.11.11,0,0,0-.11-.06,30,30,0,0,0-7,1.48.12.12,0,0,0-.07.1l.08,6.05a.09.09,0,0,1-.16.07L37.8,18.76a.11.11,0,0,0-.12,0,29.75,29.75,0,0,0-5.83,4.13.11.11,0,0,0,0,.12l2.59,5.6a.11.11,0,0,1-.13.14l-5.9-2a.11.11,0,0,0-.12,0,30.23,30.23,0,0,0-3.62,6.08.11.11,0,0,0,0,.12l4.79,4.19a.1.1,0,0,1-.06.17L23,37.91a.1.1,0,0,0-.09.07A29.9,29.9,0,0,0,22,44.92a.1.1,0,0,0,.07.1L28.4,47a.1.1,0,0,1,0,.18l-5.84,3.26a.16.16,0,0,0,0,.11,30.17,30.17,0,0,0,2.1,6.76c.32.71.67,1.4,1,2.08a.1.1,0,0,0,.06,0L52,68.16H52l26.34-8.78a.1.1,0,0,0,.06-.05,30.48,30.48,0,0,0,3.11-8.88.1.1,0,0,0-.05-.11l-5.83-3.26A.1.1,0,0,1,75.68,46.9Z"></path></svg></div><div id="fileExplorerIcons" data-id="verticalIconsFileExplorerIcons"> <div plugin="fileExplorers" title="File explorers" data-id="verticalIconsKindfileExplorers" class="icon_2aGKki active"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB3aWR0aD0iMTc5MiIgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xNjk2IDM4NHE0MCAwIDY4IDI4dDI4IDY4djEyMTZxMCA0MC0yOCA2OHQtNjggMjhoLTk2MHEtNDAgMC02OC0yOHQtMjgtNjh2LTI4OGgtNTQ0cS00MCAwLTY4LTI4dC0yOC02OHYtNjcycTAtNDAgMjAtODh0NDgtNzZsNDA4LTQwOHEyOC0yOCA3Ni00OHQ4OC0yMGg0MTZxNDAgMCA2OCAyOHQyOCA2OHYzMjhxNjgtNDAgMTI4LTQwaDQxNnptLTU0NCAyMTNsLTI5OSAyOTloMjk5di0yOTl6bS02NDAtMzg0bC0yOTkgMjk5aDI5OXYtMjk5em0xOTYgNjQ3bDMxNi0zMTZ2LTQxNmgtMzg0djQxNnEwIDQwLTI4IDY4dC02OCAyOGgtNDE2djY0MGg1MTJ2LTI1NnEwLTQwIDIwLTg4dDQ4LTc2em05NTYgODA0di0xMTUyaC0zODR2NDE2cTAgNDAtMjggNjh0LTY4IDI4aC00MTZ2NjQwaDg5NnoiLz48L3N2Zz4=" alt="fileExplorers" class="image" style="filter: invert(0) grayscale(1) brightness(0%);"></div></div><div id="compileIcons"> </div><div id="runIcons"> </div><div id="testingIcons"> </div><div id="analysisIcons"> </div><div id="debuggingIcons" data-id="verticalIconsDebuggingIcons"> </div><div id="otherIcons"> </div><div id="settingsIcons" data-id="verticalIconsSettingsIcons"> <div plugin="pluginManager" title="Plugin manager" data-id="verticalIconsKindpluginManager" class="icon_2aGKki"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB3aWR0aD0iMTc5MiIgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xNzU1IDQ1M3EzNyAzOCAzNyA5MC41dC0zNyA5MC41bC00MDEgNDAwIDE1MCAxNTAtMTYwIDE2MHEtMTYzIDE2My0zODkuNSAxODYuNXQtNDExLjUtMTAwLjVsLTM2MiAzNjJoLTE4MXYtMTgxbDM2Mi0zNjJxLTEyNC0xODUtMTAwLjUtNDExLjV0MTg2LjUtMzg5LjVsMTYwLTE2MCAxNTAgMTUwIDQwMC00MDFxMzgtMzcgOTEtMzd0OTAgMzcgMzcgOTAuNS0zNyA5MC41bC00MDAgNDAxIDIzNCAyMzQgNDAxLTQwMHEzOC0zNyA5MS0zN3Q5MCAzN3oiLz48L3N2Zz4=" alt="pluginManager" class="image" style="filter: invert(0.5);"></div><div plugin="settings" title="Settings" data-id="verticalIconsKindsettings" class="icon_2aGKki"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB3aWR0aD0iMTc5MiIgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xMTUyIDg5NnEwLTEwNi03NS0xODF0LTE4MS03NS0xODEgNzUtNzUgMTgxIDc1IDE4MSAxODEgNzUgMTgxLTc1IDc1LTE4MXptNTEyLTEwOXYyMjJxMCAxMi04IDIzdC0yMCAxM2wtMTg1IDI4cS0xOSA1NC0zOSA5MSAzNSA1MCAxMDcgMTM4IDEwIDEyIDEwIDI1dC05IDIzcS0yNyAzNy05OSAxMDh0LTk0IDcxcS0xMiAwLTI2LTlsLTEzOC0xMDhxLTQ0IDIzLTkxIDM4LTE2IDEzNi0yOSAxODYtNyAyOC0zNiAyOGgtMjIycS0xNCAwLTI0LjUtOC41dC0xMS41LTIxLjVsLTI4LTE4NHEtNDktMTYtOTAtMzdsLTE0MSAxMDdxLTEwIDktMjUgOS0xNCAwLTI1LTExLTEyNi0xMTQtMTY1LTE2OC03LTEwLTctMjMgMC0xMiA4LTIzIDE1LTIxIDUxLTY2LjV0NTQtNzAuNXEtMjctNTAtNDEtOTlsLTE4My0yN3EtMTMtMi0yMS0xMi41dC04LTIzLjV2LTIyMnEwLTEyIDgtMjN0MTktMTNsMTg2LTI4cTE0LTQ2IDM5LTkyLTQwLTU3LTEwNy0xMzgtMTAtMTItMTAtMjQgMC0xMCA5LTIzIDI2LTM2IDk4LjUtMTA3LjV0OTQuNS03MS41cTEzIDAgMjYgMTBsMTM4IDEwN3E0NC0yMyA5MS0zOCAxNi0xMzYgMjktMTg2IDctMjggMzYtMjhoMjIycTE0IDAgMjQuNSA4LjV0MTEuNSAyMS41bDI4IDE4NHE0OSAxNiA5MCAzN2wxNDItMTA3cTktOSAyNC05IDEzIDAgMjUgMTAgMTI5IDExOSAxNjUgMTcwIDcgOCA3IDIyIDAgMTItOCAyMy0xNSAyMS01MSA2Ni41dC01NCA3MC41cTI2IDUwIDQxIDk4bDE4MyAyOHExMyAyIDIxIDEyLjV0OCAyMy41eiIvPjwvc3ZnPg==" alt="settings" class="image" style="filter: invert(0.5);"></div></div></div></div><div id="side-panel" data-id="remixIdeSidePanel" style="min-width: 320px;" class="sidepanel_RSExR border-right border-left"><section class="panel_2YawIs plugin-manager"><header class="swapitHeader_2YawIs"><h6 data-id="sidePanelSwapitTitle" class="swapitTitle_2YawIs">File explorers</h6><a href="https://remix-ide.readthedocs.io/en/latest/file_explorer.html" title="link to documentation" target="_blank" class="titleInfo_2YawIs"><i aria-hidden="true" class="fas fa-book"></i></a></header><div class="pluginsContainer_2YawIs"><div id="plugins" class="plugins_1o31mc"><div class="plugItIn_1o31mc" style="display: none;"><div id="pluginManager" data-id="pluginManagerComponentPluginManager"><header data-id="pluginManagerComponentPluginManagerHeader" class="form-group pluginSearch_1dJy0o plugins-header py-3 px-4 border-bottom"><input placeholder="Search" data-id="pluginManagerComponentSearchInput" class="pluginSearchInput_1dJy0o form-control"><button data-id="pluginManagerComponentPluginSearchButton" class="pluginSearchButton_1dJy0o btn bg-transparent text-dark border-0 mt-2 text-underline"> Connect to a Local Plugin </button></header><section data-id="pluginManagerComponentPluginManagerSection"><div data-id="pluginManagerComponentActiveTile" class="list-group list-group-flush plugins-list-group"></div><nav class="plugins-list-header justify-content-between navbar navbar-expand-lg bg-light navbar-light align-items-center"><span class="navbar-brand plugins-list-title h6 mb-0 mr-2">Inactive Modules</span><span style="cursor: default;" data-id="pluginManagerComponentInactiveTilesCount" class="badge badge-primary">27</span></nav><div data-id="pluginManagerComponentInactiveTile" class="list-group list-group-flush plugins-list-group"><article id="remixPluginManagerListItem_box" title="3Box Spaces" class="list-group-item py-1 plugins-list-group-item"><div class="row_1dJy0o justify-content-between align-items-center mb-2"><h6 class="displayName_1dJy0o plugin-name">3Box Spaces<small title="Version Beta" class="versionWarning_1dJy0o plugin-version">beta</small></h6><button data-id="pluginManagerComponentActivateButtonbox" class="btn btn-success btn-sm"> Activate </button></div><p class="description_1dJy0o text-body plugin-text">A decentralized storage for everything that happen on Remix</p></article><article id="remixPluginManagerListItem_chainlens" title="ChainLens" class="list-group-item py-1 plugins-list-group-item"><div class="row_1dJy0o justify-content-between align-items-center mb-2"><h6 class="displayName_1dJy0o plugin-name">ChainLens</h6><button data-id="pluginManagerComponentActivateButtonchainlens" class="btn btn-success btn-sm"> Activate </button></div><p class="description_1dJy0o text-body plugin-text">Browser &amp; searcher for Ethereum smart contracts</p></article><article id="remixPluginManagerListItem_contractFetcher" title="contract fetcher" class="list-group-item py-1 plugins-list-group-item"><div class="row_1dJy0o justify-content-between align-items-center mb-2"><h6 class="displayName_1dJy0o plugin-name">contract fetcher<small title="Version Beta" class="versionWarning_1dJy0o plugin-version">beta</small></h6><button data-id="pluginManagerComponentActivateButtoncontractFetcher" class="btn btn-success btn-sm"> Activate </button></div><p class="description_1dJy0o text-body plugin-text">Fetch metadata and source code from a given contract address</p></article><article id="remixPluginManagerListItem_cfg" title="Control Flow Graph" class="list-group-item py-1 plugins-list-group-item"><div class="row_1dJy0o justify-content-between align-items-center mb-2"><h6 class="displayName_1dJy0o plugin-name">Control Flow Graph<small title="Version Alpha" class="versionWarning_1dJy0o plugin-version">alpha</small></h6><button data-id="pluginManagerComponentActivateButtoncfg" class="btn btn-success btn-sm"> Activate </button></div><p class="description_1dJy0o text-body plugin-text">Visualise the execution of a program</p></article><article id="remixPluginManagerListItem_debugPlugin" title="Debug Tools for Remix plugins" class="list-group-item py-1 plugins-list-group-item"><div class="row_1dJy0o justify-content-between align-items-center mb-2"><h6 class="displayName_1dJy0o plugin-name">Debug Tools for Remix plugins<small title="Version Alpha" class="versionWarning_1dJy0o plugin-version">alpha</small></h6><button data-id="pluginManagerComponentActivateButtondebugPlugin" class="btn btn-success btn-sm"> Activate </button></div><p class="description_1dJy0o text-body plugin-text">Easily test and debug your plugins !</p></article><article id="remixPluginManagerListItem_debugger" title="Debugger" class="list-group-item py-1 plugins-list-group-item"><div class="row_1dJy0o justify-content-between align-items-center mb-2"><h6 class="displayName_1dJy0o plugin-name">Debugger</h6><button data-id="pluginManagerComponentActivateButtondebugger" class="btn btn-success btn-sm"> Activate </button></div><p class="description_1dJy0o text-body plugin-text">Debug transactions</p></article><article id="remixPluginManagerListItem_udapp" title="Deploy &amp; run transactions" class="list-group-item py-1 plugins-list-group-item"><div class="row_1dJy0o justify-content-between align-items-center mb-2"><h6 class="displayName_1dJy0o plugin-name">Deploy &amp; run transactions</h6><button data-id="pluginManagerComponentActivateButtonudapp" class="btn btn-success btn-sm"> Activate </button></div><p class="description_1dJy0o text-body plugin-text">execute and save transactions</p></article><article id="remixPluginManagerListItem_ethdoc" title="Ethdoc - Documentation Generator" class="list-group-item py-1 plugins-list-group-item"><div class="row_1dJy0o justify-content-between align-items-center mb-2"><h6 class="displayName_1dJy0o plugin-name">Ethdoc - Documentation Generator</h6><button data-id="pluginManagerComponentActivateButtonethdoc" class="btn btn-success btn-sm"> Activate </button></div><p class="description_1dJy0o text-body plugin-text">Generate Solidity documentation (as md) using Natspec</p></article><article id="remixPluginManagerListItem_etherscan" title="Etherscan - Contract verification" class="list-group-item py-1 plugins-list-group-item"><div class="row_1dJy0o justify-content-between align-items-center mb-2"><h6 class="displayName_1dJy0o plugin-name">Etherscan - Contract verification</h6><button data-id="pluginManagerComponentActivateButtonetherscan" class="btn btn-success btn-sm"> Activate </button></div><p class="description_1dJy0o text-body plugin-text">Verify Solidity contract code using Etherscan API</p></article><article id="remixPluginManagerListItem_ethPM" title="ethPM" class="list-group-item py-1 plugins-list-group-item"><div class="row_1dJy0o justify-content-between align-items-center mb-2"><h6 class="displayName_1dJy0o plugin-name">ethPM</h6><button data-id="pluginManagerComponentActivateButtonethPM" class="btn btn-success btn-sm"> Activate </button></div><p class="description_1dJy0o text-body plugin-text">Generate and import ethPM packages.</p></article><article id="remixPluginManagerListItem_flattener" title="Flattener" class="list-group-item py-1 plugins-list-group-item"><div class="row_1dJy0o justify-content-between align-items-center mb-2"><h6 class="displayName_1dJy0o plugin-name">Flattener</h6><button data-id="pluginManagerComponentActivateButtonflattener" class="btn btn-success btn-sm"> Activate </button></div><p class="description_1dJy0o text-body plugin-text">Flattens compiled smart contracts</p></article><article id="remixPluginManagerListItem_gasProfiler" title="Gas Profiler" class="list-group-item py-1 plugins-list-group-item"><div class="row_1dJy0o justify-content-between align-items-center mb-2"><h6 class="displayName_1dJy0o plugin-name">Gas Profiler<small title="Version Alpha" class="versionWarning_1dJy0o plugin-version">alpha</small></h6><button data-id="pluginManagerComponentActivateButtongasProfiler" class="btn btn-success btn-sm"> Activate </button></div><p class="description_1dJy0o text-body plugin-text">Profile gas costs</p></article><article id="remixPluginManagerListItem_Ink" title="Ink" class="list-group-item py-1 plugins-list-group-item"><div class="row_1dJy0o justify-content-between align-items-center mb-2"><h6 class="displayName_1dJy0o plugin-name">Ink<small title="Version Alpha" class="versionWarning_1dJy0o plugin-version">alpha</small></h6><button data-id="pluginManagerComponentActivateButtonInk" class="btn btn-success btn-sm"> Activate </button></div><p class="description_1dJy0o text-body plugin-text">ink! is a Rust-based embedded domain specific language (eDSL) for writing WebAssembly smart contracts specifically on Substrate</p></article><article id="remixPluginManagerListItem_lexon" title="Lexon" class="list-group-item py-1 plugins-list-group-item"><div class="row_1dJy0o justify-content-between align-items-center mb-2"><h6 class="displayName_1dJy0o plugin-name">Lexon<small title="Version Alpha" class="versionWarning_1dJy0o plugin-version">alpha</small></h6><button data-id="pluginManagerComponentActivateButtonlexon" class="btn btn-success btn-sm"> Activate </button></div><p class="description_1dJy0o text-body plugin-text">Compile Lexon contracts</p></article><article id="remixPluginManagerListItem_mythx" title="MythX Security Verification" class="list-group-item py-1 plugins-list-group-item"><div class="row_1dJy0o justify-content-between align-items-center mb-2"><h6 class="displayName_1dJy0o plugin-name">MythX Security Verification</h6><button data-id="pluginManagerComponentActivateButtonmythx" class="btn btn-success btn-sm"> Activate </button></div><p class="description_1dJy0o text-body plugin-text">Perform Static and Dynamic Security Analysis using the MythX Cloud Service</p></article><article id="remixPluginManagerListItem_oneClickDapp" title="One Click Dapp" class="list-group-item py-1 plugins-list-group-item"><div class="row_1dJy0o justify-content-between align-items-center mb-2"><h6 class="displayName_1dJy0o plugin-name">One Click Dapp</h6><button data-id="pluginManagerComponentActivateButtononeClickDapp" class="btn btn-success btn-sm"> Activate </button></div><p class="description_1dJy0o text-body plugin-text">A free tool to generate smart contract interfaces.</p></article><article id="remixPluginManagerListItem_pipeline" title="Pipeline" class="list-group-item py-1 plugins-list-group-item"><div class="row_1dJy0o justify-content-between align-items-center mb-2"><h6 class="displayName_1dJy0o plugin-name">Pipeline</h6><button data-id="pluginManagerComponentActivateButtonpipeline" class="btn btn-success btn-sm"> Activate </button></div><p class="description_1dJy0o text-body plugin-text">Visual IDE for contracts and dapps</p></article><article id="remixPluginManagerListItem_provable" title="Provable - oracle service" class="list-group-item py-1 plugins-list-group-item"><div class="row_1dJy0o justify-content-between align-items-center mb-2"><h6 class="displayName_1dJy0o plugin-name">Provable - oracle service</h6><button data-id="pluginManagerComponentActivateButtonprovable" class="btn btn-success btn-sm"> Activate </button></div><p class="description_1dJy0o text-body plugin-text">request real-world data for your contracts</p></article><article id="remixPluginManagerListItem_quorum" title="Quorum Network" class="list-group-item py-1 plugins-list-group-item"><div class="row_1dJy0o justify-content-between align-items-center mb-2"><h6 class="displayName_1dJy0o plugin-name">Quorum Network<small title="Version Beta" class="versionWarning_1dJy0o plugin-version">beta</small></h6><button data-id="pluginManagerComponentActivateButtonquorum" class="btn btn-success btn-sm"> Activate </button></div><p class="description_1dJy0o text-body plugin-text">Deploy and interact with private contracts on a Quorum network.</p></article><article id="remixPluginManagerListItem_workshops" title="Remix Workshops" class="list-group-item py-1 plugins-list-group-item"><div class="row_1dJy0o justify-content-between align-items-center mb-2"><h6 class="displayName_1dJy0o plugin-name">Remix Workshops<small title="Version Beta" class="versionWarning_1dJy0o plugin-version">beta</small></h6><button data-id="pluginManagerComponentActivateButtonworkshops" class="btn btn-success btn-sm"> Activate </button></div><p class="description_1dJy0o text-body plugin-text">Learn Ethereum with Remix !</p></article><article id="remixPluginManagerListItem_remixd" title="remixd" class="list-group-item py-1 plugins-list-group-item"><div class="row_1dJy0o justify-content-between align-items-center mb-2"><h6 class="displayName_1dJy0o plugin-name">remixd</h6><button data-id="pluginManagerComponentActivateButtonremixd" class="btn btn-success btn-sm"> Activate </button></div><p class="description_1dJy0o text-body plugin-text">Using Remixd daemon, allow to access file system</p></article><article id="remixPluginManagerListItem_solidity" title="Solidity compiler" class="list-group-item py-1 plugins-list-group-item"><div class="row_1dJy0o justify-content-between align-items-center mb-2"><h6 class="displayName_1dJy0o plugin-name">Solidity compiler</h6><button data-id="pluginManagerComponentActivateButtonsolidity" class="btn btn-success btn-sm"> Activate </button></div><p class="description_1dJy0o text-body plugin-text">Compile solidity contracts</p></article><article id="remixPluginManagerListItem_solidityStaticAnalysis" title="Solidity static analysis" class="list-group-item py-1 plugins-list-group-item"><div class="row_1dJy0o justify-content-between align-items-center mb-2"><h6 class="displayName_1dJy0o plugin-name">Solidity static analysis</h6><button data-id="pluginManagerComponentActivateButtonsolidityStaticAnalysis" class="btn btn-success btn-sm"> Activate </button></div><p class="description_1dJy0o text-body plugin-text">Checks the contract code for security vulnerabilities and bad practices.</p></article><article id="remixPluginManagerListItem_solidityUnitTesting" title="Solidity unit testing" class="list-group-item py-1 plugins-list-group-item"><div class="row_1dJy0o justify-content-between align-items-center mb-2"><h6 class="displayName_1dJy0o plugin-name">Solidity unit testing</h6><button data-id="pluginManagerComponentActivateButtonsolidityUnitTesting" class="btn btn-success btn-sm"> Activate </button></div><p class="description_1dJy0o text-body plugin-text">Fast tool to generate unit tests for your contracts</p></article><article id="remixPluginManagerListItem_vyper" title="Vyper" class="list-group-item py-1 plugins-list-group-item"><div class="row_1dJy0o justify-content-between align-items-center mb-2"><h6 class="displayName_1dJy0o plugin-name">Vyper</h6><button data-id="pluginManagerComponentActivateButtonvyper" class="btn btn-success btn-sm"> Activate </button></div><p class="description_1dJy0o text-body plugin-text">Compile vyper contracts</p></article><article id="remixPluginManagerListItem_yulp" title="Yul+" class="list-group-item py-1 plugins-list-group-item"><div class="row_1dJy0o justify-content-between align-items-center mb-2"><h6 class="displayName_1dJy0o plugin-name">Yul+<small title="Version Beta" class="versionWarning_1dJy0o plugin-version">beta</small></h6><button data-id="pluginManagerComponentActivateButtonyulp" class="btn btn-success btn-sm"> Activate </button></div><p class="description_1dJy0o text-body plugin-text">Build, test and deploy Yul+ contracts in remix.</p></article><article id="remixPluginManagerListItem_ZoKrates" title="ZoKrates" class="list-group-item py-1 plugins-list-group-item"><div class="row_1dJy0o justify-content-between align-items-center mb-2"><h6 class="displayName_1dJy0o plugin-name">ZoKrates<small title="Version Alpha" class="versionWarning_1dJy0o plugin-version">alpha</small></h6><button data-id="pluginManagerComponentActivateButtonZoKrates" class="btn btn-success btn-sm"> Activate </button></div><p class="description_1dJy0o text-body plugin-text">ZoKrates toolbox for zkSNARKs on Ethereum</p></article></div></section><footer class="bg-light permissions_3civKl remix-bg-opacity"><button data-id="pluginManagerPermissionsButton" class="btn btn-primary settings-button">Permissions</button></footer></div></div><div class="plugItIn_1o31mc" style="display: flex;"><div class="container_1UnAFT" style="height: 100%; width: 100%; border: 0px; display: block;"><div class="fileexplorer_1UnAFT"><div class="fileExplorerTree_1UnAFT"><div><div data-id="filePanelFileExplorerTree" class="treeview_1UnAFT"><div><ul key="" data-id="treeViewUl" class="ul_tv_1wtZNj fileexplorer_2ArcOJ"><li key="browser" data-id="treeViewLibrowser" class="li_tv_1wtZNj"><div key="browser" data-id="treeViewDivbrowser" class="label_tv_1wtZNj"><div class="fas fa-caret-down caret caret_tv_1wtZNj" data-id="treeViewTogglebrowser"></div><span><div class="items_2ArcOJ"><span title="browser" data-path="browser" style="font-weight:bold;" class="label_2ArcOJ ">browser</span><span class=" menu_2ArcOJ"><span id="createNewFile" data-id="fileExplorerNewFilecreateNewFile" title="Create New File" class="newFile fas fa-plus-circle newFile_2ArcOJ"> </span><span id="publishToGist" data-id="fileExplorerNewFilepublishToGist" title="Publish all [browser] explorer files to a github gist" class="newFile fab fa-github newFile_2ArcOJ"> </span><label id="uploadFile" data-id="fileExplorerUploadFileuploadFile" title="Add Local file to the Browser Storage Explorer" class="far fa-folder-open newFile_2ArcOJ"><input type="file" multiple="multiple"></label></span></div></span></div><ul key="browser" data-id="treeViewUlbrowser" class="ul_tv_1wtZNj"><li key="browser/1_Storage.sol" data-id="treeViewLibrowser/1_Storage.sol" class="li_tv_1wtZNj"><div key="browser/1_Storage.sol" data-id="treeViewDivbrowser/1_Storage.sol" class="label_tv_1wtZNj"><div class="fas fa-caret-right caret caret_tv_1wtZNj" style="visibility: hidden;"></div><span><div class="items_2ArcOJ"><span title="browser/1_Storage.sol" data-path="browser/1_Storage.sol" style="" class="label_2ArcOJ leaf_2ArcOJ">1_Storage.sol</span></div></span></div></li><li key="browser/2_Owner.sol" data-id="treeViewLibrowser/2_Owner.sol" class="li_tv_1wtZNj"><div key="browser/2_Owner.sol" data-id="treeViewDivbrowser/2_Owner.sol" class="label_tv_1wtZNj"><div class="fas fa-caret-right caret caret_tv_1wtZNj" style="visibility: hidden;"></div><span><div class="items_2ArcOJ"><span title="browser/2_Owner.sol" data-path="browser/2_Owner.sol" style="" class="label_2ArcOJ leaf_2ArcOJ">2_Owner.sol</span></div></span></div></li><li key="browser/3_Ballot.sol" data-id="treeViewLibrowser/3_Ballot.sol" class="li_tv_1wtZNj"><div key="browser/3_Ballot.sol" data-id="treeViewDivbrowser/3_Ballot.sol" class="label_tv_1wtZNj"><div class="fas fa-caret-right caret caret_tv_1wtZNj" style="visibility: hidden;"></div><span><div class="items_2ArcOJ"><span title="browser/3_Ballot.sol" data-path="browser/3_Ballot.sol" style="" class="label_2ArcOJ leaf_2ArcOJ">3_Ballot.sol</span></div></span></div></li><li key="browser/4_Ballot_test.sol" data-id="treeViewLibrowser/4_Ballot_test.sol" class="li_tv_1wtZNj"><div key="browser/4_Ballot_test.sol" data-id="treeViewDivbrowser/4_Ballot_test.sol" class="label_tv_1wtZNj"><div class="fas fa-caret-right caret caret_tv_1wtZNj" style="visibility: hidden;"></div><span><div class="items_2ArcOJ"><span title="browser/4_Ballot_test.sol" data-path="browser/4_Ballot_test.sol" style="" class="label_2ArcOJ leaf_2ArcOJ">4_Ballot_test.sol</span></div></span></div></li><li key="browser/Structs.sol" data-id="treeViewLibrowser/Structs.sol" class="li_tv_1wtZNj"><div key="browser/Structs.sol" data-id="treeViewDivbrowser/Structs.sol" class="label_tv_1wtZNj"><div class="fas fa-caret-right caret caret_tv_1wtZNj" style="visibility: hidden;"></div><span><div class="items_2ArcOJ"><span title="browser/Structs.sol" data-path="browser/Structs.sol" style="" class="label_2ArcOJ leaf_2ArcOJ">Structs.sol</span></div></span></div></li><li key="browser/Mappings.sol" data-id="treeViewLibrowser/Mappings.sol" class="li_tv_1wtZNj"><div key="browser/Mappings.sol" data-id="treeViewDivbrowser/Mappings.sol" class="label_tv_1wtZNj"><div class="fas fa-caret-right caret caret_tv_1wtZNj" style="visibility: hidden;"></div><span><div class="items_2ArcOJ"><span title="browser/Mappings.sol" data-path="browser/Mappings.sol" style="" class="label_2ArcOJ leaf_2ArcOJ">Mappings.sol</span></div></span></div></li><li key="browser/Control Flow.sol" data-id="treeViewLibrowser/Control Flow.sol" class="li_tv_1wtZNj"><div key="browser/Control Flow.sol" data-id="treeViewDivbrowser/Control Flow.sol" class="label_tv_1wtZNj"><div class="fas fa-caret-right caret caret_tv_1wtZNj" style="visibility: hidden;"></div><span><div class="items_2ArcOJ"><span title="browser/Control Flow.sol" data-path="browser/Control Flow.sol" style="" class="label_2ArcOJ leaf_2ArcOJ">Control Flow.sol</span></div></span></div></li><li key="browser/Visibility.sol" data-id="treeViewLibrowser/Visibility.sol" class="li_tv_1wtZNj"><div key="browser/Visibility.sol" data-id="treeViewDivbrowser/Visibility.sol" class="label_tv_1wtZNj"><div class="fas fa-caret-right caret caret_tv_1wtZNj" style="visibility: hidden;"></div><span><div class="items_2ArcOJ"><span title="browser/Visibility.sol" data-path="browser/Visibility.sol" style="" class="label_2ArcOJ leaf_2ArcOJ">Visibility.sol</span></div></span></div></li><li key="browser/Require.sol" data-id="treeViewLibrowser/Require.sol" class="li_tv_1wtZNj"><div key="browser/Require.sol" data-id="treeViewDivbrowser/Require.sol" class="label_tv_1wtZNj"><div class="fas fa-caret-right caret caret_tv_1wtZNj" style="visibility: hidden;"></div><span><div class="items_2ArcOJ"><span title="browser/Require.sol" data-path="browser/Require.sol" style="" class="label_2ArcOJ leaf_2ArcOJ">Require.sol</span></div></span></div></li><li key="browser/Assert.sol" data-id="treeViewLibrowser/Assert.sol" class="li_tv_1wtZNj"><div key="browser/Assert.sol" data-id="treeViewDivbrowser/Assert.sol" class="label_tv_1wtZNj"><div class="fas fa-caret-right caret caret_tv_1wtZNj" style="visibility: hidden;"></div><span><div class="items_2ArcOJ"><span title="browser/Assert.sol" data-path="browser/Assert.sol" style="" class="label_2ArcOJ leaf_2ArcOJ">Assert.sol</span></div></span></div></li><li key="browser/Modifiers.sol" data-id="treeViewLibrowser/Modifiers.sol" class="li_tv_1wtZNj"><div key="browser/Modifiers.sol" data-id="treeViewDivbrowser/Modifiers.sol" class="label_tv_1wtZNj"><div class="fas fa-caret-right caret caret_tv_1wtZNj" style="visibility: hidden;"></div><span><div class="items_2ArcOJ"><span title="browser/Modifiers.sol" data-path="browser/Modifiers.sol" style="" class="label_2ArcOJ leaf_2ArcOJ">Modifiers.sol</span></div></span></div></li><li key="browser/DataLocations.sol" data-id="treeViewLibrowser/DataLocations.sol" class="li_tv_1wtZNj"><div key="browser/DataLocations.sol" data-id="treeViewDivbrowser/DataLocations.sol" class="label_tv_1wtZNj"><div class="fas fa-caret-right caret caret_tv_1wtZNj" style="visibility: hidden;"></div><span><div class="items_2ArcOJ"><span title="browser/DataLocations.sol" data-path="browser/DataLocations.sol" style="" class="label_2ArcOJ leaf_2ArcOJ">DataLocations.sol</span></div></span></div></li><li key="browser/MemoryAndStorage.sol" data-id="treeViewLibrowser/MemoryAndStorage.sol" class="li_tv_1wtZNj"><div key="browser/MemoryAndStorage.sol" data-id="treeViewDivbrowser/MemoryAndStorage.sol" class="label_tv_1wtZNj"><div class="fas fa-caret-right caret caret_tv_1wtZNj" style="visibility: hidden;"></div><span><div class="items_2ArcOJ"><span title="browser/MemoryAndStorage.sol" data-path="browser/MemoryAndStorage.sol" style="" class="label_2ArcOJ leaf_2ArcOJ">MemoryAndStorage.sol</span></div></span></div></li><li key="browser/Events.sol" data-id="treeViewLibrowser/Events.sol" class="li_tv_1wtZNj"><div key="browser/Events.sol" data-id="treeViewDivbrowser/Events.sol" class="label_tv_1wtZNj"><div class="fas fa-caret-right caret caret_tv_1wtZNj" style="visibility: hidden;"></div><span><div class="items_2ArcOJ"><span title="browser/Events.sol" data-path="browser/Events.sol" style="" class="label_2ArcOJ leaf_2ArcOJ">Events.sol</span></div></span></div></li><li key="browser/ReceivingMoney.sol" data-id="treeViewLibrowser/ReceivingMoney.sol" class="li_tv_1wtZNj"><div key="browser/ReceivingMoney.sol" data-id="treeViewDivbrowser/ReceivingMoney.sol" class="label_tv_1wtZNj"><div class="fas fa-caret-right caret caret_tv_1wtZNj" style="visibility: hidden;"></div><span><div class="items_2ArcOJ"><span title="browser/ReceivingMoney.sol" data-path="browser/ReceivingMoney.sol" style="" class="label_2ArcOJ leaf_2ArcOJ">ReceivingMoney.sol</span></div></span></div></li><li key="browser/SendingMoney.sol" data-id="treeViewLibrowser/SendingMoney.sol" class="li_tv_1wtZNj"><div key="browser/SendingMoney.sol" data-id="treeViewDivbrowser/SendingMoney.sol" class="label_tv_1wtZNj"><div class="fas fa-caret-right caret caret_tv_1wtZNj" style="visibility: hidden;"></div><span><div class="items_2ArcOJ"><span title="browser/SendingMoney.sol" data-path="browser/SendingMoney.sol" style="" class="label_2ArcOJ leaf_2ArcOJ">SendingMoney.sol</span></div></span></div></li><li key="browser/PayableAddresses.sol" data-id="treeViewLibrowser/PayableAddresses.sol" class="li_tv_1wtZNj"><div key="browser/PayableAddresses.sol" data-id="treeViewDivbrowser/PayableAddresses.sol" class="label_tv_1wtZNj"><div class="fas fa-caret-right caret caret_tv_1wtZNj" style="visibility: hidden;"></div><span><div class="items_2ArcOJ"><span title="browser/PayableAddresses.sol" data-path="browser/PayableAddresses.sol" style="" class="label_2ArcOJ leaf_2ArcOJ">PayableAddresses.sol</span></div></span></div></li><li key="browser/Destroyable.sol" data-id="treeViewLibrowser/Destroyable.sol" class="li_tv_1wtZNj"><div key="browser/Destroyable.sol" data-id="treeViewDivbrowser/Destroyable.sol" class="label_tv_1wtZNj"><div class="fas fa-caret-right caret caret_tv_1wtZNj" style="visibility: hidden;"></div><span><div class="items_2ArcOJ"><span title="browser/Destroyable.sol" data-path="browser/Destroyable.sol" style="" class="label_2ArcOJ leaf_2ArcOJ">Destroyable.sol</span></div></span></div></li><li key="browser/Ownable.sol" data-id="treeViewLibrowser/Ownable.sol" class="li_tv_1wtZNj"><div key="browser/Ownable.sol" data-id="treeViewDivbrowser/Ownable.sol" class="label_tv_1wtZNj bg-secondary"><div class="fas fa-caret-right caret caret_tv_1wtZNj" style="visibility: hidden;"></div><span><div class="items_2ArcOJ"><span title="browser/Ownable.sol" data-path="browser/Ownable.sol" style="" class="label_2ArcOJ leaf_2ArcOJ">Ownable.sol</span></div></span></div></li><li key="browser/External.sol" data-id="treeViewLibrowser/External.sol" class="li_tv_1wtZNj"><div key="browser/External.sol" data-id="treeViewDivbrowser/External.sol" class="label_tv_1wtZNj"><div class="fas fa-caret-right caret caret_tv_1wtZNj" style="visibility: hidden;"></div><span><div class="items_2ArcOJ"><span title="browser/External.sol" data-path="browser/External.sol" style="" class="label_2ArcOJ leaf_2ArcOJ">External.sol</span></div></span></div></li><li key="browser/HelloWorld.sol" data-id="treeViewLibrowser/HelloWorld.sol" class="li_tv_1wtZNj"><div key="browser/HelloWorld.sol" data-id="treeViewDivbrowser/HelloWorld.sol" class="label_tv_1wtZNj"><div class="fas fa-caret-right caret caret_tv_1wtZNj" style="visibility: hidden;"></div><span><div class="items_2ArcOJ"><span title="browser/HelloWorld.sol" data-path="browser/HelloWorld.sol" style="" class="label_2ArcOJ leaf_2ArcOJ">HelloWorld.sol</span></div></span></div></li><li key="browser/Inheritance.sol" data-id="treeViewLibrowser/Inheritance.sol" class="li_tv_1wtZNj"><div key="browser/Inheritance.sol" data-id="treeViewDivbrowser/Inheritance.sol" class="label_tv_1wtZNj"><div class="fas fa-caret-right caret caret_tv_1wtZNj" style="visibility: hidden;"></div><span><div class="items_2ArcOJ"><span title="browser/Inheritance.sol" data-path="browser/Inheritance.sol" style="" class="label_2ArcOJ leaf_2ArcOJ">Inheritance.sol</span></div></span></div></li></ul></li></ul></div></div><div class="filesystemexplorer treeview_1UnAFT"><div></div></div></div></div></div></div></div><div class="plugItIn_1o31mc" style="display: none;"><div id="settingsView" data-id="settingsTabSettingsView" class="settingsTabView_1i88h9" style="height: 100%; width: 100%; border: 0px; display: block;"><div class="info_1i88h9 card"><div class="card-body"><h6 class="undefined card-title">Have a question?</h6><button data-id="settingsTabGitterChannelButton" class="btn btn-primary sm-1">Gitter Channel</button></div></div><div class="info_1i88h9 card"><div class="card-body"><h6 class="undefined card-title">General settings</h6><div class="form-check frow_1i88h9"><div><input id="generatecontractmetadata" data-id="settingsTabGenerateContractMetadata" type="checkbox" class="form-check-input"></div><label class="form-check-label align-middle" for="generatecontractmetadata">Generate contract metadata. Generate a JSON file in the contract folder. Allows to specify library addresses the contract depends on. If nothing is specified, Remix deploys libraries automatically.</label></div><div class="form-check frow_1i88h9"><div><input id="alwaysUseVM" data-id="settingsTabAlwaysUseVM" type="checkbox" class="align-middle form-check-input" checked=""></div><label class="form-check-label align-middle" for="alwaysUseVM">Always use Ethereum VM at Load</label></div><div class="form-check frow_1i88h9"><div><input id="editorWrap" type="checkbox" class="form-check-input align-middle"></div><label class="form-check-label align-middle" for="editorWrap">Text Wrap</label></div><div class="form-check frow_1i88h9"><div><input id="personal" type="checkbox" class="align-middle form-check-input"></div><label class="form-check-label align-middle" for="personal"><i aria-hidden="true" class="icon_1i88h9 fas fa-exclamation-triangle text-warning"></i> Enable Personal Mode for web3 provider. Transaction sent over Web3 will use the web3.personal API - be sure the endpoint is opened before enabling it. This mode allows to provide the passphrase in the Remix interface without having to unlock the account. Although this is very convenient, you should completely trust the backend you are connected to (Geth, Parity, ...). Remix never persist any passphrase.</label></div></div></div><div class="info_1i88h9 card"><div class="card-body"><h6 class="undefined card-title">Github Access Token</h6><p class="">Manage the access token used to publish to Gist and retrieve Github contents.</p><p class="">Go to github token page (link below) to create a new token and save it in Remix. Make sure this token has only 'create gist' permission.</p><p class="crowNoFlex_1i88h9"><a target="_blank" href="https://github.com/settings/tokens">https://github.com/settings/tokens</a></p><div class="crowNoFlex_1i88h9"><div class="text-secondary mb-0 h6"><input id="gistaccesstoken" data-id="settingsTabGistAccessToken" type="password" placeholder="Token" class="border form-control-sm mb-2 inline_1i88h9"><input id="savegisttoken" data-id="settingsTabSaveGistToken" value="Save" type="button" class="btn btn-sm btn-primary"><i title="Copy value to clipboard" data-id="copyToClipboardCopyIcon" aria-hidden="true" class="copyIcon_3sVBlb far fa-copy p-2"></i><i id="removegisttoken" data-id="settingsTabRemoveGistToken" title="Delete Github access token" type="button" class="mx-1 fas fa-trash-alt"></i></div></div></div></div><div class="info_1i88h9 card"><div class="card-body"><h6 class="undefined card-title">Themes</h6><div class="card-text themes-container"><div class="frow_1i88h9 form-check crow_1i88h9"><input type="radio" name="theme" id="Dark" data-id="settingsTabThemeDark" class="align-middle form-check-input"><label class="form-check-label" for="Dark">Dark (dark)</label></div><div class="frow_1i88h9 form-check crow_1i88h9"><input type="radio" name="theme" id="Light" data-id="settingsTabThemeLight" class="align-middle form-check-input"><label class="form-check-label" for="Light">Light (light)</label></div><div class="frow_1i88h9 form-check crow_1i88h9"><input type="radio" name="theme" id="Cerulean" data-id="settingsTabThemeCerulean" class="align-middle form-check-input"><label class="form-check-label" for="Cerulean">Cerulean (light)</label></div><div class="frow_1i88h9 form-check crow_1i88h9"><input type="radio" name="theme" id="Flatly" data-id="settingsTabThemeFlatly" class="align-middle form-check-input"><label class="form-check-label" for="Flatly">Flatly (light)</label></div><div class="frow_1i88h9 form-check crow_1i88h9"><input type="radio" name="theme" id="Lumen" data-id="settingsTabThemeLumen" class="align-middle form-check-input"><label class="form-check-label" for="Lumen">Lumen (light)</label></div><div class="frow_1i88h9 form-check crow_1i88h9"><input type="radio" name="theme" id="Minty" data-id="settingsTabThemeMinty" class="align-middle form-check-input"><label class="form-check-label" for="Minty">Minty (light)</label></div><div class="frow_1i88h9 form-check crow_1i88h9"><input type="radio" name="theme" id="Pulse" data-id="settingsTabThemePulse" class="align-middle form-check-input"><label class="form-check-label" for="Pulse">Pulse (light)</label></div><div class="frow_1i88h9 form-check crow_1i88h9"><input type="radio" name="theme" id="Sandstone" data-id="settingsTabThemeSandstone" class="align-middle form-check-input"><label class="form-check-label" for="Sandstone">Sandstone (light)</label></div><div class="frow_1i88h9 form-check crow_1i88h9"><input type="radio" name="theme" id="Spacelab" data-id="settingsTabThemeSpacelab" class="align-middle form-check-input"><label class="form-check-label" for="Spacelab">Spacelab (light)</label></div><div class="frow_1i88h9 form-check crow_1i88h9"><input type="radio" name="theme" id="Yeti" data-id="settingsTabThemeYeti" class="align-middle form-check-input"><label class="form-check-label" for="Yeti">Yeti (light)</label></div><div class="frow_1i88h9 form-check crow_1i88h9"><input type="radio" name="theme" id="Cyborg" data-id="settingsTabThemeCyborg" class="align-middle form-check-input"><label class="form-check-label" for="Cyborg">Cyborg (dark)</label></div><div class="frow_1i88h9 form-check crow_1i88h9"><input type="radio" name="theme" id="Darkly" data-id="settingsTabThemeDarkly" class="align-middle form-check-input"><label class="form-check-label" for="Darkly">Darkly (dark)</label></div><div class="frow_1i88h9 form-check crow_1i88h9"><input type="radio" name="theme" id="Slate" data-id="settingsTabThemeSlate" class="align-middle form-check-input" checked="checked"><label class="form-check-label" for="Slate">Slate (light)</label></div><div class="frow_1i88h9 form-check crow_1i88h9"><input type="radio" name="theme" id="Superhero" data-id="settingsTabThemeSuperhero" class="align-middle form-check-input"><label class="form-check-label" for="Superhero">Superhero (dark)</label></div></div></div></div></div></div></div></div></section></div><div class="dragbar_3ExFFr"></div><div id="main-panel" data-id="remixIdeMainPanel" class="mainpanel_RSExR"><div class="mainview_3GDJYU"><div style="display: -webkit-box; min-height: 35px"><div class="d-flex flex-row justify-content-center align-items-center"><span data-id="tabProxyZoomOut" class="btn btn-sm px-1 fas fa-search-minus text-dark"></span><span data-id="tabProxyZoomIn" class="btn btn-sm px-1 fas fa-search-plus text-dark"></span></div><remix-tabs><!---->
+      <header class="header nav nav-tabs role=" tablist"="">
+        
+      <style>
+        remix-tabs {
+          height: 100%;
+          position: relative;
+          display: flex;
+          width: 100%;
+          overflow: hidden;
+          user-select: none;
+        }
+        .header {
+          flex-direction: row;
+          display: flex;
+          width: calc(100% - 65px);
+          border-top-left-radius: 3px;
+          border-top-right-radius: 3px;
+          position: relative;
+          list-style: none;
+          box-sizing: content-box;
+          overflow: hidden;
+        }
+        .plus {
+          display: inherit;
+          align-items: center;
+          padding-left: 4px;
+          color: var(--text-light)
+        }
+        remix-tab {
+          margin-right: 1px;
+          margin-top: 4px;
+        }
+        .tab {
+          flex-direction: row;
+          padding-right: 4px;
+        }
+        .tabList {
+          height: fit-content;
+          position: fixed;
+          right: 8px;
+          top: 2.1em;
+          max-height: 90%;
+          overflow-y: auto;
+          z-index: 100;
+          overflow-x: hidden;
+        }
+        .dropdown {
+          padding-top: 3px;
+          padding-bottom: 3px;
+          right: 0px;
+          position: fixed;
+          z-index: 100;
+        }
+        .listItems {
+        }
+      </style>
+    
+        <!---->
+        <remix-tab <!--{{lit-28563057601755926}}--="" id="browser/MemoryAndStorage.sol" class="nav-item p-1 nav-link border-0" tab="{&quot;id&quot;:&quot;browser/MemoryAndStorage.sol&quot;,&quot;title&quot;:&quot;MemoryAndStorage.sol&quot;,&quot;tooltip&quot;:&quot;browser/MemoryAndStorage.sol&quot;}"><!---->
+    <style>
+      .title {
+        flex-direction: row;
+        padding: inherit;
+        align-items: center;
+        padding-right: 8px;
+        padding-left: 2px;
+        cursor: default;
+        /*to make it unselectable*/
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none;   /* Chrome/Safari/Opera */
+        -khtml-user-select: none;    /* Konqueror */
+        -moz-user-select: none;      /* Firefox */
+        -ms-user-select: none;       /* Internet Explorer/Edge */
+        user-select: none;           /* Non-prefixed version, currently supported by any browser but < IE9 */
+        vertical-align: middle;
+      }
+      .tab:hover .close{
+        visibility: visible
+      }
+      .active .close {
+        visibility: visible
+      }
+      .close {
+        visibility: hidden;
+        padding-top: 4px;
+        font-size: medium;
+      }
+      .image {
+        width: 16px;
+      }
+    </style>
+
+    <div class="tab" title="browser/MemoryAndStorage.sol">
+      
+      <span class="title"><!---->MemoryAndStorage.sol<!----></span>
+        <span class="close">
+          <i class="text-dark fas fa-times"></i>
+      </span>
+    </div>
+  <!----></remix-tab>
+      <!---->
+        <remix-tab <!--{{lit-28563057601755926}}--="" id="browser/Events.sol" class="nav-item p-1 nav-link border-0" tab="{&quot;id&quot;:&quot;browser/Events.sol&quot;,&quot;title&quot;:&quot;Events.sol&quot;,&quot;tooltip&quot;:&quot;browser/Events.sol&quot;}"><!---->
+    <style>
+      .title {
+        flex-direction: row;
+        padding: inherit;
+        align-items: center;
+        padding-right: 8px;
+        padding-left: 2px;
+        cursor: default;
+        /*to make it unselectable*/
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none;   /* Chrome/Safari/Opera */
+        -khtml-user-select: none;    /* Konqueror */
+        -moz-user-select: none;      /* Firefox */
+        -ms-user-select: none;       /* Internet Explorer/Edge */
+        user-select: none;           /* Non-prefixed version, currently supported by any browser but < IE9 */
+        vertical-align: middle;
+      }
+      .tab:hover .close{
+        visibility: visible
+      }
+      .active .close {
+        visibility: visible
+      }
+      .close {
+        visibility: hidden;
+        padding-top: 4px;
+        font-size: medium;
+      }
+      .image {
+        width: 16px;
+      }
+    </style>
+
+    <div class="tab" title="browser/Events.sol">
+      
+      <span class="title"><!---->Events.sol<!----></span>
+        <span class="close">
+          <i class="text-dark fas fa-times"></i>
+      </span>
+    </div>
+  <!----></remix-tab>
+      <!---->
+        <remix-tab <!--{{lit-28563057601755926}}--="" id="browser/ReceivingMoney.sol" class="nav-item p-1 nav-link border-0" tab="{&quot;id&quot;:&quot;browser/ReceivingMoney.sol&quot;,&quot;title&quot;:&quot;ReceivingMoney.sol&quot;,&quot;tooltip&quot;:&quot;browser/ReceivingMoney.sol&quot;}"><!---->
+    <style>
+      .title {
+        flex-direction: row;
+        padding: inherit;
+        align-items: center;
+        padding-right: 8px;
+        padding-left: 2px;
+        cursor: default;
+        /*to make it unselectable*/
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none;   /* Chrome/Safari/Opera */
+        -khtml-user-select: none;    /* Konqueror */
+        -moz-user-select: none;      /* Firefox */
+        -ms-user-select: none;       /* Internet Explorer/Edge */
+        user-select: none;           /* Non-prefixed version, currently supported by any browser but < IE9 */
+        vertical-align: middle;
+      }
+      .tab:hover .close{
+        visibility: visible
+      }
+      .active .close {
+        visibility: visible
+      }
+      .close {
+        visibility: hidden;
+        padding-top: 4px;
+        font-size: medium;
+      }
+      .image {
+        width: 16px;
+      }
+    </style>
+
+    <div class="tab" title="browser/ReceivingMoney.sol">
+      
+      <span class="title"><!---->ReceivingMoney.sol<!----></span>
+        <span class="close">
+          <i class="text-dark fas fa-times"></i>
+      </span>
+    </div>
+  <!----></remix-tab>
+      <!---->
+        <remix-tab <!--{{lit-28563057601755926}}--="" id="browser/SendingMoney.sol" class="nav-item p-1 nav-link border-0" tab="{&quot;id&quot;:&quot;browser/SendingMoney.sol&quot;,&quot;title&quot;:&quot;SendingMoney.sol&quot;,&quot;tooltip&quot;:&quot;browser/SendingMoney.sol&quot;}"><!---->
+    <style>
+      .title {
+        flex-direction: row;
+        padding: inherit;
+        align-items: center;
+        padding-right: 8px;
+        padding-left: 2px;
+        cursor: default;
+        /*to make it unselectable*/
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none;   /* Chrome/Safari/Opera */
+        -khtml-user-select: none;    /* Konqueror */
+        -moz-user-select: none;      /* Firefox */
+        -ms-user-select: none;       /* Internet Explorer/Edge */
+        user-select: none;           /* Non-prefixed version, currently supported by any browser but < IE9 */
+        vertical-align: middle;
+      }
+      .tab:hover .close{
+        visibility: visible
+      }
+      .active .close {
+        visibility: visible
+      }
+      .close {
+        visibility: hidden;
+        padding-top: 4px;
+        font-size: medium;
+      }
+      .image {
+        width: 16px;
+      }
+    </style>
+
+    <div class="tab" title="browser/SendingMoney.sol">
+      
+      <span class="title"><!---->SendingMoney.sol<!----></span>
+        <span class="close">
+          <i class="text-dark fas fa-times"></i>
+      </span>
+    </div>
+  <!----></remix-tab>
+      <!---->
+        <remix-tab <!--{{lit-28563057601755926}}--="" id="browser/PayableAddresses.sol" class="nav-item p-1 nav-link border-0" tab="{&quot;id&quot;:&quot;browser/PayableAddresses.sol&quot;,&quot;title&quot;:&quot;PayableAddresses.sol&quot;,&quot;tooltip&quot;:&quot;browser/PayableAddresses.sol&quot;}"><!---->
+    <style>
+      .title {
+        flex-direction: row;
+        padding: inherit;
+        align-items: center;
+        padding-right: 8px;
+        padding-left: 2px;
+        cursor: default;
+        /*to make it unselectable*/
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none;   /* Chrome/Safari/Opera */
+        -khtml-user-select: none;    /* Konqueror */
+        -moz-user-select: none;      /* Firefox */
+        -ms-user-select: none;       /* Internet Explorer/Edge */
+        user-select: none;           /* Non-prefixed version, currently supported by any browser but < IE9 */
+        vertical-align: middle;
+      }
+      .tab:hover .close{
+        visibility: visible
+      }
+      .active .close {
+        visibility: visible
+      }
+      .close {
+        visibility: hidden;
+        padding-top: 4px;
+        font-size: medium;
+      }
+      .image {
+        width: 16px;
+      }
+    </style>
+
+    <div class="tab" title="browser/PayableAddresses.sol">
+      
+      <span class="title"><!---->PayableAddresses.sol<!----></span>
+        <span class="close">
+          <i class="text-dark fas fa-times"></i>
+      </span>
+    </div>
+  <!----></remix-tab>
+      <!---->
+        <remix-tab <!--{{lit-28563057601755926}}--="" id="browser/Destroyable.sol" class="nav-item p-1 nav-link border-0" tab="{&quot;id&quot;:&quot;browser/Destroyable.sol&quot;,&quot;title&quot;:&quot;Destroyable.sol&quot;,&quot;tooltip&quot;:&quot;browser/Destroyable.sol&quot;}"><!---->
+    <style>
+      .title {
+        flex-direction: row;
+        padding: inherit;
+        align-items: center;
+        padding-right: 8px;
+        padding-left: 2px;
+        cursor: default;
+        /*to make it unselectable*/
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none;   /* Chrome/Safari/Opera */
+        -khtml-user-select: none;    /* Konqueror */
+        -moz-user-select: none;      /* Firefox */
+        -ms-user-select: none;       /* Internet Explorer/Edge */
+        user-select: none;           /* Non-prefixed version, currently supported by any browser but < IE9 */
+        vertical-align: middle;
+      }
+      .tab:hover .close{
+        visibility: visible
+      }
+      .active .close {
+        visibility: visible
+      }
+      .close {
+        visibility: hidden;
+        padding-top: 4px;
+        font-size: medium;
+      }
+      .image {
+        width: 16px;
+      }
+    </style>
+
+    <div class="tab" title="browser/Destroyable.sol">
+      
+      <span class="title"><!---->Destroyable.sol<!----></span>
+        <span class="close">
+          <i class="text-dark fas fa-times"></i>
+      </span>
+    </div>
+  <!----></remix-tab>
+      <!---->
+        <remix-tab <!--{{lit-28563057601755926}}--="" id="browser/Ownable.sol" class="nav-item p-1 nav-link active border-bottom-0 border-dark" tab="{&quot;id&quot;:&quot;browser/Ownable.sol&quot;,&quot;title&quot;:&quot;Ownable.sol&quot;,&quot;tooltip&quot;:&quot;browser/Ownable.sol&quot;}"><!---->
+    <style>
+      .title {
+        flex-direction: row;
+        padding: inherit;
+        align-items: center;
+        padding-right: 8px;
+        padding-left: 2px;
+        cursor: default;
+        /*to make it unselectable*/
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none;   /* Chrome/Safari/Opera */
+        -khtml-user-select: none;    /* Konqueror */
+        -moz-user-select: none;      /* Firefox */
+        -ms-user-select: none;       /* Internet Explorer/Edge */
+        user-select: none;           /* Non-prefixed version, currently supported by any browser but < IE9 */
+        vertical-align: middle;
+      }
+      .tab:hover .close{
+        visibility: visible
+      }
+      .active .close {
+        visibility: visible
+      }
+      .close {
+        visibility: hidden;
+        padding-top: 4px;
+        font-size: medium;
+      }
+      .image {
+        width: 16px;
+      }
+    </style>
+
+    <div class="tab" title="browser/Ownable.sol">
+      
+      <span class="title"><!---->Ownable.sol<!----></span>
+        <span class="close">
+          <i class="text-dark fas fa-times"></i>
+      </span>
+    </div>
+  <!----></remix-tab>
+      <!---->
+        
+        
+      </header>
+      
+      <div class="dropdown px-1">
+        <span class="dropdownCaret p-1 m-1  badge badge-secondary">
+          7 tabs
+          <i class="text-dark fas fa-caret-down" aria-hidden="true"></i>
+        </span>
+      </div>
+    
+    <!----></remix-tabs></div><div id="input" data-id="editorInput" class=" ace_editor ace-editor_2ylRCR ace-chrome" style="display: block; height: 672px;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 14px; width: 6.59781px; left: 51px; top: 0px;"></textarea><div class="ace_gutter"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 655px; width: 47px;"><div class="ace_gutter-cell " style="height: 14px;">1</div><div class="ace_gutter-cell " style="height: 14px;">2</div><div class="ace_gutter-cell " style="height: 14px;">3<span class="ace_fold-widget ace_start ace_open" style="height: 14px;"></span></div><div class="ace_gutter-cell " style="height: 14px;">4</div><div class="ace_gutter-cell " style="height: 14px;">5</div><div class="ace_gutter-cell " style="height: 14px;">6</div><div class="ace_gutter-cell " style="height: 14px;">7<span class="ace_fold-widget ace_start ace_open" style="height: 14px;"></span></div><div class="ace_gutter-cell " style="height: 14px;">8</div><div class="ace_gutter-cell " style="height: 14px;">9</div><div class="ace_gutter-cell " style="height: 14px;">10</div><div class="ace_gutter-cell " style="height: 14px;">11</div><div class="ace_gutter-cell " style="height: 14px;">12<span class="ace_fold-widget ace_start ace_open" style="height: 14px;"></span></div><div class="ace_gutter-cell " style="height: 14px;">13</div><div class="ace_gutter-cell " style="height: 14px;">14</div><div class="ace_gutter-cell " style="height: 14px;">15</div></div><div class="ace_gutter-active-line" style="top: 0px; height: 14px;"></div></div><div class="ace_scroller" style="left: 47px; right: 0px; bottom: 0px;"><div class="ace_content" style="margin-top: 0px; width: 1501px; height: 655px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 531.825px; visibility: hidden;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height:14px;top:0px;left:0;right:0;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" style="height:14px"><span class="ace_keyword">pragma</span> <span class="ace_keyword">solidity</span> <span class="ace_constant ace_other">0.5.12</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14px"></div><div class="ace_line" style="height:14px"><span class="ace_storage ace_type">contract</span> <span class="ace_identifier">Ownable</span> <span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height:14px"></div><div class="ace_line" style="height:14px"><span class="ace_storage ace_type">address</span> <span class="ace_storage ace_modifier ace_statemutability">payable</span> <span class="ace_storage ace_modifier ace_visibility">internal</span> <span class="ace_identifier">owner</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14px"></div><div class="ace_line" style="height:14px"><span class="ace_storage ace_type">modifier</span> <span class="ace_identifier">onlyOwner</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span><span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height:14px"><span class="ace_indent-guide">    </span>    <span class="ace_support ace_function">require</span><span class="ace_paren ace_lparen">(</span><span class="ace_support ace_variable">msg.sender</span> <span class="ace_keyword ace_operator">==</span> <span class="ace_identifier">owner</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14px"><span class="ace_indent-guide">    </span>    <span class="ace_keyword ace_control">_</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14px">    <span class="ace_paren ace_rparen">}</span></div><div class="ace_line" style="height:14px">    </div><div class="ace_line" style="height:14px"><span class="ace_storage ace_type">constructor</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span> <span class="ace_storage ace_modifier ace_visibility">public</span><span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height:14px">    <span class="ace_identifier">owner</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_support ace_variable">msg.sender</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14px">    <span class="ace_paren ace_rparen">}</span></div><div class="ace_line" style="height:14px"><span class="ace_paren ace_rparen">}</span></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="left: 4px; top: 0px; width: 6.59781px; height: 14px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="width: 22px; bottom: 0px; display: none;"><div class="ace_scrollbar-inner" style="width: 22px; height: 210px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 22px; left: 47px; right: 0px;"><div class="ace_scrollbar-inner" style="height: 22px; width: 1501px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div><div data-id="mainPanelPluginsContainer" class="pluginsContainer_3cZxuR" style="height: 672px; display: none;"><div id="plugins" class="plugins_1o31mc"></div></div><div class="contextview_1aBVsD contextviewcontainer_1aBVsD bg-light text-dark border-0" style="display: block;"><div class="container_1aBVsD"><div></div></div></div><div style="height: 203px;" class="panel_nF0zh"><div class="bar_nF0zh"><div class="dragbarHorizontal_nF0zh"></div><div data-id="terminalToggleMenu" class="menu_nF0zh border-top border-dark bg-light"><i data-id="terminalToggleIcon" class="btn btn-secondary btn-sm align-items-center toggleTerminal_nF0zh fas fa-angle-double-down"></i><div id="clearConsole" data-id="terminalClearConsole" class="clear_nF0zh"><i aria-hidden="true" title="Clear console" class="fas fa-ban"></i></div><div title="Pending Transactions" class="pendingTx_nF0zh">0</div><div class="verticalLine_nF0zh"></div><div class="form-check"><input id="listenNetworkCheck" type="checkbox" title="If checked Remix will listen on all transactions mined in the current environment and not only transactions created by you" class="form-check-input "><label title="If checked Remix will listen on all transactions mined in the current environment and not only transactions created by you" class="listenOnNetworkLabel_nF0zh form-check-label" for="listenNetworkCheck"> listen on network </label></div><div class="search_nF0zh"><i aria-hidden="true" class="fas fa-search searchIcon_nF0zh bg-light"></i><input spellcheck="spellcheck" type="text" id="searchInput" placeholder="Search with transaction hash or address" data-id="terminalInputSearch" class="border filter_nF0zh form-control"></div></div></div><div tabindex="-1" data-id="terminalContainer" class="terminal_container_nF0zh"><div class="popup_2V1R6E alert alert-secondary" style="display: none;"><div></div><div class="listHandlerHide_2V1R6E"><div class="pageNumberAlignment_2V1R6E">Page 1 of 0</div></div></div><div data-id="terminalContainerDisplay" style="
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          opacity: 0.1;
+          z-index: -1;
+        "></div><div class="terminal_nF0zh"><div id="journal" data-id="terminalJournal" class="journal_nF0zh"><div class="px-4 block_nF0zh"><div><div>remix.call(message: {name, key, payload}): Call a registered plugins</div><br><div>remix.getFile(path): Returns the content of the file located at the given path</div><br><div>remix.setFile(path, content): set the content of the file located at the given path</div><br><div>remix.debug(hash): Start debugging a transaction.</div><br><div>remix.loadgist(id): Load a gist in the file explorer.</div><br><div>remix.loadurl(url): Load the given url in the file explorer. The url can be of type github, swarm, ipfs or raw http</div><br><div>remix.setproviderurl(url): Change the current provider to Web3 provider and set the url endpoint.</div><br><div>remix.execute(filepath): Run the script specified by file path. If filepath is empty, script currently displayed in the editor is executed.</div><br><div>remix.exeCurrent(): Run the script currently displayed in the editor</div><br><div>remix.help(): Display this help message</div><br><div>remix.debugHelp(): Display help message for debugging</div><br></div></div><div class="px-4 block_nF0zh"><div><div> - Welcome to Remix v0.10.0 - </div><br><div>You can use this terminal for: </div><ul class="ul_stNQn"><li>Checking transactions details and start debugging.</li><li>Running JavaScript scripts. The following libraries are accessible: <ul class="ul_stNQn"><li><a target="_blank" href="https://web3js.readthedocs.io/en/1.0/">web3 version 1.0.0</a></li><li><a target="_blank" href="https://docs.ethers.io/ethers.js/html/">ethers.js</a></li><li><a target="_blank" href="https://www.npmjs.com/package/swarmgw">swarmgw</a></li><li>remix (run remix.help() for more info)</li></ul></li><li>Executing common command to interact with the Remix interface (see list of commands above). Note that these commands can also be included and run from a JavaScript script.</li><li>Use exports/.register(key, obj)/.remove(key)/.clear() to register and reuse object across script executions.</li></ul></div></div></div><div id="terminalCli" data-id="terminalCli" class="cli_nF0zh"><span class="prompt_nF0zh">&gt;</span><span class="input_nF0zh" spellcheck="false" contenteditable="true" id="terminalCliInput" data-id="terminalCliInput"><br></span></div></div></div></div></div></div></div><div class="pluginsContainer_RSAlr"><div id="plugins" class="plugins_1o31mc"><div class="plugItIn_1o31mc" style="display: none;"><iframe sandbox="allow-popups allow-scripts allow-same-origin allow-forms allow-top-navigation" seamless="true" id="plugin-scriptRunner" src="./Ownable_files/Qmcvr9exnMmVDX9E6oc1b84D2yg5Pvp4yphcBCHyURiRci.html" style="height: 100%; width: 100%; border: 0px; display: block;"></iframe></div></div></div></body></html>
