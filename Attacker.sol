@@ -8,7 +8,7 @@ import "./Fundraiser.sol";
 
 contract Attacker{
     
-    /* views */
+    /* Views */
     address public fundraiserAddress;
     uint public drainTimes = 0;
     
